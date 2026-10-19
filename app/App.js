@@ -7,7 +7,8 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 import QUESTIONS from './src/questions';
 import { CONFIG } from './src/config';
 import { palettes } from './src/theme';
-import { answer, buildSession, categoriesOf, initialStore, results } from './src/logic';
+import { answer, buildSession, categoriesOf, initialStore, results, shouldShowInterstitial } from './src/logic';
+import { initAds, prepareInterstitial, showAdPrivacyOptions, showInterstitialIfReady } from './src/ads';
 import { Home, Quiz, Result } from './src/screens';
 
 const CATEGORIES = categoriesOf(QUESTIONS);
@@ -35,6 +36,7 @@ export default function App() {
   const [session, setSession] = useState(null);
   const [kind, setKind] = useState(null);
   const [finished, setFinished] = useState(false);
+  const [adsReady, setAdsReady] = useState(false);
 
   // Carrega o progresso guardado no telemóvel.
   useEffect(() => {
@@ -44,6 +46,14 @@ export default function App() {
       })
       .catch(() => {})
       .finally(() => setLoaded(true));
+  }, []);
+
+  // Consentimento (RGPD) e arranque dos anúncios.
+  useEffect(() => {
+    initAds().then((ok) => {
+      setAdsReady(ok);
+      if (ok) prepareInterstitial();
+    });
   }, []);
 
   const persist = useCallback((next) => {
@@ -80,8 +90,10 @@ export default function App() {
     if (session.i + 1 < session.items.length) {
       setSession({ ...session, i: session.i + 1 });
     } else {
-      persist({ ...store, sessions: store.sessions + 1 });
+      const done = store.sessions + 1;
+      persist({ ...store, sessions: done });
       setFinished(true);
+      if (shouldShowInterstitial(done, CONFIG.interstitialEvery)) showInterstitialIfReady();
     }
   }, [session, store, persist]);
 
@@ -103,7 +115,7 @@ export default function App() {
 
   let screen;
   if (session && finished && result) {
-    screen = <Result colors={colors} session={session} result={result} passRatio={CONFIG.passRatio} onAgain={() => start(kind)} onHome={goHome} />;
+    screen = <Result colors={colors} session={session} result={result} passRatio={CONFIG.passRatio} onAgain={() => start(kind)} onHome={goHome} adsReady={adsReady} />;
   } else if (session) {
     screen = <Quiz colors={colors} session={session} onAnswer={onAnswer} onNext={onNext} onExit={goHome} />;
   } else {
@@ -116,6 +128,8 @@ export default function App() {
         wrongCount={QUESTIONS.filter((q) => store.wrong.includes(q.id)).length}
         examSize={CONFIG.examSize}
         onStart={start}
+        adsReady={adsReady}
+        onAdPrivacy={showAdPrivacyOptions}
       />
     );
   }

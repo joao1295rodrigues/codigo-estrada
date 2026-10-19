@@ -2,6 +2,7 @@ import { useMemo } from 'react';
 import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { percent } from './logic';
+import { AdBanner } from './ads';
 
 const makeStyles = (c) =>
   StyleSheet.create({
@@ -83,7 +84,7 @@ function Shell({ colors, children }) {
   );
 }
 
-export function Home({ colors, store, total, categories, wrongCount, examSize, onStart }) {
+export function Home({ colors, store, total, categories, wrongCount, examSize, onStart, adsReady, onAdPrivacy }) {
   const s = useStyles(colors);
   return (
     <Shell colors={colors}>
@@ -109,10 +110,17 @@ export function Home({ colors, store, total, categories, wrongCount, examSize, o
         ))}
       </View>
 
+      <AdBanner ready={adsReady} />
+
       <Text style={s.foot}>
         Conteúdo informativo e de treino. Não substitui o manual oficial nem a legislação em vigor: confirma sempre no IMT (imt-ip.pt).
-        {'\n'}Sem registo e sem anúncios. O teu progresso fica guardado apenas neste dispositivo.
+        {'\n'}Sem registo. A app mostra anúncios (Google AdMob). O teu progresso fica guardado apenas neste dispositivo.
       </Text>
+      {adsReady ? (
+        <Pressable accessibilityRole="button" onPress={onAdPrivacy} style={{ paddingVertical: 8 }}>
+          <Text style={[s.foot, { marginTop: 0, textDecorationLine: 'underline' }]}>Preferências de anúncios</Text>
+        </Pressable>
+      ) : null}
     </Shell>
   );
 }
@@ -158,7 +166,7 @@ export function Quiz({ colors, session, onAnswer, onNext, onExit }) {
   );
 }
 
-export function Result({ colors, session, result, passRatio, onAgain, onHome }) {
+export function Result({ colors, session, result, passRatio, onAgain, onHome, adsReady }) {
   const s = useStyles(colors);
   const exam = session.mode === 'exam';
   const { total, right, wrongItems, passed } = result;
@@ -190,6 +198,8 @@ export function Result({ colors, session, result, passRatio, onAgain, onHome }) 
       ) : (
         <Text style={s.lead}>Sem erros. Excelente!</Text>
       )}
+
+      <AdBanner ready={adsReady} />
 
       <Button s={s} primary label="Repetir" onPress={onAgain} />
       <Button s={s} label="Início" onPress={onHome} />

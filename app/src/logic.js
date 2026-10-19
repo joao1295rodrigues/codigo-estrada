@@ -48,3 +48,6 @@ export const results = (session, passRatio) => {
 };
 
 export const percent = (store) => (store.answered ? Math.round((store.correct / store.answered) * 100) : 0);
+
+// Anúncio de ecrã inteiro: só depois de concluir uma sessão, e não a todas.
+export const shouldShowInterstitial = (sessionsDone, every = 3) => sessionsDone > 0 && sessionsDone % every === 0;

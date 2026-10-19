@@ -1,7 +1,7 @@
 // Testes da lógica pura. Correr: npm test
 import assert from 'node:assert/strict';
 import QUESTIONS from '../src/questions.js';
-import { answer, buildSession, categoriesOf, initialStore, percent, results, shuffle } from '../src/logic.js';
+import { answer, buildSession, categoriesOf, initialStore, percent, results, shouldShowInterstitial, shuffle } from '../src/logic.js';
 
 const seeded = (seed = 1) => () => ((seed = (seed * 1664525 + 1013904223) >>> 0) / 4294967296);
 
@@ -61,5 +61,8 @@ for (let i = 0; i < 10; i++) { const a = answer({ ...sn, i }, stn, wrong(sn.item
 const bad = results(sn, 0.9);
 assert.equal(bad.right, 0); assert.equal(bad.passed, false); assert.equal(bad.wrongItems.length, 10);
 assert.equal(percent(initialStore), 0);
+
+// anúncio de ecrã inteiro: nunca à 1.ª nem à 2.ª sessão, e só de 3 em 3
+assert.deepEqual([0, 1, 2, 3, 4, 5, 6].map((n) => shouldShowInterstitial(n, 3)), [false, false, false, true, false, false, true]);
 
 console.log('lógica: todos os testes passaram');
