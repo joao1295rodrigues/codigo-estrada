@@ -13,10 +13,11 @@ const ctx = vm.createContext({});
 vm.runInContext(
   fs.readFileSync(path.join(ROOT, "config.js"), "utf8") +
   fs.readFileSync(path.join(ROOT, "questions.js"), "utf8") +
-  ";this.CONFIG = CONFIG; this.QUESTIONS = QUESTIONS;",
+  fs.readFileSync(path.join(ROOT, "guias.js"), "utf8") +
+  ";this.CONFIG = CONFIG; this.QUESTIONS = QUESTIONS; this.GUIAS = GUIAS;",
   ctx
 );
-const { CONFIG, QUESTIONS } = ctx;
+const { CONFIG, QUESTIONS, GUIAS } = ctx;
 
 // Baralha as opções (de forma estável, sempre igual entre builds) para a resposta certa
 // não ficar quase sempre na mesma posição nas páginas estáticas.
@@ -72,7 +73,7 @@ const page = ({ title, desc, urlPath, depth = 0, body }) => {
 <body>
   <header class="top">
     <a class="brand" href="${up}./"><img src="${up}icon.svg" alt="" width="28" height="28"><span>Código da Estrada</span></a>
-    <nav class="nav"><a href="${up}perguntas/">Perguntas</a><a href="${up}sobre.html">Sobre</a></nav>
+    <nav class="nav"><a href="${up}perguntas/">Perguntas</a><a href="${up}guias/">Guias</a><a href="${up}sobre.html">Sobre</a></nav>
   </header>
   <main class="page">
 ${body}
@@ -104,7 +105,7 @@ write("index.html", fs.readFileSync(path.join(ROOT, "index.html"), "utf8")
   .replace("<!--HEAD-->", headExtra("")));
 
 // páginas de perguntas por categoria
-const urls = ["", "perguntas/", "sobre.html", "privacidade.html"];
+const urls = ["", "perguntas/", "guias/", "sobre.html", "privacidade.html"];
 for (const c of categories) {
   const qs = byCat(c);
   const file = `perguntas/${slug(c)}.html`;
@@ -130,6 +131,40 @@ ${articles}
     <p><a href="./">← Todas as categorias</a></p>`,
   }));
 }
+
+// guias (artigos)
+const TODAY = new Date().toISOString().slice(0, 10);
+const fmtDate = (iso) => new Date(iso + "T00:00:00Z").toLocaleDateString("pt-PT", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" });
+for (const g of GUIAS) {
+  const file = `guias/${g.slug}.html`;
+  urls.push(file);
+  const others = GUIAS.filter((x) => x.slug !== g.slug).map((x) => `<li><a href="${x.slug}.html">${esc(x.title)}</a></li>`).join("");
+  write(file, page({
+    title: `${g.title} – Código da Estrada`,
+    desc: g.desc,
+    urlPath: file, depth: 1,
+    body: `    <h1>${esc(g.title)}</h1>
+    <p class="lead">${esc(g.desc)}</p>
+    ${adBlock(CONFIG.adSlotPage)}
+${g.body}
+    <h2>Treina este tema</h2>
+    <p>Põe em prática com perguntas de <b>${esc(g.cat)}</b>, com correção e explicação.</p>
+    <a class="btn primary block" style="text-align:center;text-decoration:none" href="../index.html#cat=${encodeURIComponent(g.cat)}">Treinar ${esc(g.cat)}</a>
+    <h2>Outros guias</h2>
+    <ul>${others}</ul>
+    <p class="lead">Atualizado em ${fmtDate(TODAY)}. Conteúdo informativo, baseado no Código da Estrada e em fontes que citam a legislação. Pode estar desatualizado: confirma sempre no <a href="https://www.imt-ip.pt" target="_blank" rel="noopener">IMT</a> ou na <a href="https://www.ansr.pt" target="_blank" rel="noopener">ANSR</a>.</p>`,
+  }));
+}
+write("guias/index.html", page({
+  title: "Guias do código da estrada",
+  desc: "Guias práticos sobre velocidade, álcool, pontos na carta, estacionamento, luzes, ultrapassagens e muito mais.",
+  urlPath: "guias/", depth: 1,
+  body: `    <h1>Guias do código da estrada</h1>
+    <p class="lead">${GUIAS.length} guias com as regras mais perguntadas no exame, explicadas de forma simples.</p>
+    <div class="catgrid">
+${GUIAS.map((g) => `      <a href="${g.slug}.html"><b>${esc(g.title)}</b><br><span>${esc(g.desc)}</span></a>`).join("\n")}
+    </div>`,
+}));
 
 // índice de perguntas
 write("perguntas/index.html", page({
