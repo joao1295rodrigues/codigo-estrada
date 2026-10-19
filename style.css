@@ -1,0 +1,98 @@
+:root {
+  --bg: #f8fafc;
+  --card: #ffffff;
+  --text: #0f172a;
+  --muted: #475569;
+  --line: #e2e8f0;
+  --brand: #1d4ed8;
+  --brand-ink: #ffffff;
+  --ok: #15803d;
+  --ok-bg: #dcfce7;
+  --bad: #b91c1c;
+  --bad-bg: #fee2e2;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f172a;
+    --card: #1e293b;
+    --text: #f1f5f9;
+    --muted: #94a3b8;
+    --line: #334155;
+    --brand: #3b82f6;
+    --ok: #4ade80;
+    --ok-bg: #14532d;
+    --bad: #f87171;
+    --bad-bg: #7f1d1d;
+  }
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  font: 16px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.top { background: var(--brand); padding: 12px 16px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.nav { display: flex; gap: 16px; }
+.nav a { color: #fff; text-decoration: none; font-size: .9rem; opacity: .95; }
+.nav a:hover { text-decoration: underline; }
+.qlist { list-style: upper-alpha; padding-left: 1.4rem; margin: 8px 0; }
+details { margin-top: 8px; }
+summary { cursor: pointer; font-weight: 600; color: var(--brand); }
+.catgrid { display: grid; gap: 8px; }
+.catgrid a { display: block; background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 12px 16px; color: var(--text); text-decoration: none; }
+.catgrid a span { color: var(--muted); font-size: .85rem; }
+.brand { display: inline-flex; align-items: center; gap: 10px; color: #fff; text-decoration: none; font-weight: 700; }
+#app { max-width: 640px; margin: 0 auto; padding: 16px; min-height: 70vh; }
+
+h1 { font-size: 1.5rem; line-height: 1.25; margin: 8px 0 4px; }
+h2 { font-size: 1.1rem; margin: 24px 0 8px; }
+.lead { color: var(--muted); margin: 0 0 16px; }
+
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 16px; margin: 12px 0; }
+.stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; text-align: center; }
+.stats b { display: block; font-size: 1.4rem; }
+.stats span { color: var(--muted); font-size: .8rem; }
+
+button, .btn {
+  font: inherit; cursor: pointer; border-radius: 12px; border: 1px solid var(--line);
+  background: var(--card); color: var(--text); padding: 12px 16px; text-align: left;
+}
+button:focus-visible, .btn:focus-visible { outline: 3px solid var(--brand); outline-offset: 2px; }
+.primary { background: var(--brand); color: var(--brand-ink); border-color: var(--brand); font-weight: 600; text-align: center; }
+.block { display: block; width: 100%; margin: 8px 0; }
+button:disabled { opacity: .55; cursor: not-allowed; }
+.opt:disabled { opacity: 1; cursor: default; color: var(--text); }
+
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chips button { padding: 8px 12px; border-radius: 999px; text-align: center; }
+
+.progress { height: 6px; background: var(--line); border-radius: 99px; overflow: hidden; margin: 4px 0 12px; }
+.progress i { display: block; height: 100%; background: var(--brand); }
+.meta { display: flex; justify-content: space-between; color: var(--muted); font-size: .85rem; }
+.tag { background: var(--line); border-radius: 99px; padding: 2px 10px; font-size: .75rem; }
+
+.q { font-size: 1.15rem; font-weight: 600; margin: 8px 0 12px; }
+.opt { display: block; width: 100%; margin: 8px 0; }
+.opt.ok { background: var(--ok-bg); border-color: var(--ok); }
+.opt.bad { background: var(--bad-bg); border-color: var(--bad); }
+.expl { border-left: 4px solid var(--brand); padding: 8px 12px; margin: 12px 0; background: var(--card); border-radius: 0 10px 10px 0; }
+
+.score { font-size: 2.4rem; font-weight: 800; margin: 0; }
+.pass { color: var(--ok); }
+.fail { color: var(--bad); }
+.err { border-top: 1px solid var(--line); padding: 12px 0; }
+.err:first-child { border-top: 0; }
+.err p { margin: 4px 0; }
+
+.ad { margin: 16px 0; min-height: 90px; text-align: center; overflow: hidden; }
+.ad small { display: block; color: var(--muted); font-size: .7rem; }
+
+.foot { max-width: 640px; margin: 0 auto; padding: 16px; color: var(--muted); font-size: .8rem; }
+.foot a { color: inherit; }
+.noscript { padding: 16px; text-align: center; }
+.page { max-width: 640px; margin: 0 auto; padding: 16px; }
+.page a { color: var(--brand); }
