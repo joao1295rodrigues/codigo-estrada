@@ -1,6 +1,6 @@
 {
-  "useTestAds": true,
-  "androidAppId": "",
-  "bannerUnitId": "",
-  "interstitialUnitId": ""
+  "useTestAds": false,
+  "androidAppId": "ca-app-pub-9348535205156836~9573351572",
+  "bannerUnitId": "ca-app-pub-9348535205156836/6734813125",
+  "interstitialUnitId": "ca-app-pub-9348535205156836/4108649782"
 }
