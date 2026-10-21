@@ -12,7 +12,7 @@
 - Ecrã inicial e resultados: **faixa de anúncio fixa em baixo**, com "Preferências de anúncios" por cima. Durante as perguntas **não há anúncios** (decisão por agora; ver `05`).
 - **Anúncio de ecrã inteiro (Intercalar):** só no fim de um teste, de 3 em 3 testes, e nunca duas vezes em menos de 5 minutos.
 - Download: https://github.com/joao1295rodrigues/codigo-estrada/releases/download/apk-latest/codigo-estrada.apk (com anúncios) · `codigo-estrada-sem-anuncios.apk` · `codigo-estrada-anuncios-de-teste.apk` (anúncios de teste da Google, "Test Ad").
-- Última compilação do APK: run `39688379095` (alteração do intervalo mínimo do anúncio de ecrã inteiro). Ver o resultado em Actions → "Gerar APK".
+- Última compilação do APK: run `39688379095` (intervalo mínimo de 5 minutos entre anúncios de ecrã inteiro), **concluída com sucesso em 2026-10-21 (22:54)**. Os 3 APK na release `apk-latest` estão atualizados. Decisão: o repositório fica **público** (nada secreto lá dentro; o site precisa disto).
 
 ## O que o dono vai fazer agora (sem pressa)
 1. **Esperar cerca de 24 horas** e depois testar em **outros telemóveis** (outras operadoras, sem o email dele) se aparecem anúncios. **Sem clicar** nos anúncios.
