@@ -7,7 +7,7 @@
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "automatic",
     "android": {
-      "package": "com.joao1295rodrigues.codigoestrada",
+      "package": "codigo.da.estrada.R",
       "versionCode": 1,
       "adaptiveIcon": {
         "backgroundColor": "#1d4ed8",

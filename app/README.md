@@ -29,7 +29,7 @@ npx expo start   # arrancar com o Expo Go (opcional)
 A app mostra anúncios do AdMob: um banner no ecrã inicial e nos resultados, e um anúncio de ecrã inteiro a cada 3 sessões concluídas. **Nunca aparecem durante as perguntas** (para não haver cliques acidentais, que o AdMob proíbe). Inclui o pedido de consentimento (RGPD).
 
 **Neste momento usa os anúncios de TESTE da Google** (aparecem com a legenda "Test Ad" e não geram dinheiro). Para passar a anúncios reais:
-1. Cria uma conta AdMob e regista a app (Android, pacote `com.joao1295rodrigues.codigoestrada`).
+1. Cria uma conta AdMob e regista a app (Android, pacote `codigo.da.estrada.R`).
 2. Cria um bloco **Banner** e um bloco **Intersticial**.
 3. Edita `ads.config.json`: põe `"useTestAds": false` e preenche `androidAppId`, `bannerUnitId` e `interstitialUnitId`.
 4. Faz push: o APK é compilado de novo.
