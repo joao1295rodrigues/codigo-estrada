@@ -21,5 +21,6 @@ module.exports = ({ config }) => {
     ],
   ];
   if (process.env.NO_PROVIDER) plugins.push('./plugins/no-ads-init-provider');
+  plugins.push('./plugins/no-minify'); // sem o R8 o SDK de anúncios arranca (ver plugins/no-minify.js)
   return { ...config, plugins };
 };
