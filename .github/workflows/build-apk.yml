@@ -1,9 +1,11 @@
 name: Gerar APK
 
-# Compila a app (pasta app/) em três versões, em paralelo, e publica os APKs em "Releases":
+# Compila a app (pasta app/) em várias versões, em paralelo, e publica os APKs em "Releases":
 #   codigo-estrada.apk               (com anúncios)
 #   codigo-estrada-sem-anuncios.apk  (sem anúncios)
 #   codigo-estrada-diagnostico.apk   (ecrã de diagnóstico dos anúncios)
+#   codigo-estrada-nativo.apk        (SDK incluído, sem o usar no código)
+#   codigo-estrada-diagnostico-sem-provider.apk (diagnóstico, SDK sem arranque automático)
 # Gratuito em repositórios públicos. Arranca sozinho quando a pasta app/ muda, ou em Actions → Gerar APK → Run workflow.
 on:
   workflow_dispatch:
@@ -26,7 +28,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        variant: [com-anuncios, sem-anuncios, diagnostico]
+        variant: [com-anuncios, sem-anuncios, diagnostico, nativo, diagnostico-sem-provider]
     runs-on: ubuntu-latest
     timeout-minutes: 60
     defaults:
@@ -34,6 +36,7 @@ jobs:
         working-directory: app
     env:
       NO_ADS: ${{ matrix.variant == 'sem-anuncios' && '1' || '' }}
+      NO_PROVIDER: ${{ matrix.variant == 'diagnostico-sem-provider' && '1' || '' }}
     steps:
       - uses: actions/checkout@v4
 
@@ -58,8 +61,14 @@ jobs:
           cp src/ads.stub.js src/ads.js
           cp src/Diagnostic.stub.js src/Diagnostic.js
 
+      - name: Versão "nativo" (SDK incluído, mas o código JS não o usa)
+        if: matrix.variant == 'nativo'
+        run: |
+          cp src/ads.stub.js src/ads.js
+          cp src/Diagnostic.stub.js src/Diagnostic.js
+
       - name: Versão de diagnóstico (abre o ecrã de diagnóstico dos anúncios)
-        if: matrix.variant == 'diagnostico'
+        if: matrix.variant == 'diagnostico' || matrix.variant == 'diagnostico-sem-provider'
         run: |
           printf '{"mode":"diagnostico"}' > src/adsmode.json
 
@@ -89,6 +98,8 @@ jobs:
           case "${{ matrix.variant }}" in
             sem-anuncios) N=codigo-estrada-sem-anuncios.apk ;;
             diagnostico) N=codigo-estrada-diagnostico.apk ;;
+            nativo) N=codigo-estrada-nativo.apk ;;
+            diagnostico-sem-provider) N=codigo-estrada-diagnostico-sem-provider.apk ;;
             *) N=codigo-estrada.apk ;;
           esac
           cp android/app/build/outputs/apk/release/app-release.apk "$N"
@@ -120,6 +131,8 @@ jobs:
             - `codigo-estrada.apk`: versão com anúncios.
             - `codigo-estrada-sem-anuncios.apk`: versão sem anúncios.
             - `codigo-estrada-diagnostico.apk`: ecrã de diagnóstico dos anúncios (para descobrir erros).
+            - `codigo-estrada-nativo.apk`: SDK de anúncios incluído, mas sem o usar no código (diagnóstico).
+            - `codigo-estrada-diagnostico-sem-provider.apk`: diagnóstico, com o arranque automático do SDK desligado.
             Compilado automaticamente a partir do código deste repositório.
           files: apks/*.apk
           make_latest: true
