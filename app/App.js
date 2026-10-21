@@ -115,7 +115,7 @@ export default function App() {
 
   let screen;
   if (session && finished && result) {
-    screen = <Result colors={colors} session={session} result={result} passRatio={CONFIG.passRatio} onAgain={() => start(kind)} onHome={goHome} adsReady={adsReady} />;
+    screen = <Result colors={colors} session={session} result={result} passRatio={CONFIG.passRatio} onAgain={() => start(kind)} onHome={goHome} adsReady={adsReady} onAdPrivacy={showAdPrivacyOptions} />;
   } else if (session) {
     screen = <Quiz colors={colors} session={session} onAnswer={onAnswer} onNext={onNext} onExit={goHome} />;
   } else {

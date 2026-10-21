@@ -76,7 +76,7 @@ export function AdBanner({ ready }) {
   const [failed, setFailed] = useState(false);
   if (!ready || failed) return null;
   return (
-    <View style={{ alignItems: 'center', marginVertical: 12 }}>
+    <View style={{ alignItems: 'center' }}>
       <BannerAd unitId={bannerUnitId} size={BannerAdSize.ANCHORED_ADAPTIVE_BANNER} onAdFailedToLoad={() => setFailed(true)} />
     </View>
   );

@@ -26,6 +26,8 @@ const makeStyles = (c) =>
     chips: { flexDirection: 'row', flexWrap: 'wrap', gap: 8 },
     chip: { backgroundColor: c.card, borderColor: c.line, borderWidth: 1, borderRadius: 999, paddingVertical: 8, paddingHorizontal: 12 },
     chipText: { color: c.text, fontSize: 14 },
+    adBar: { alignItems: 'center', backgroundColor: c.bg },
+    adLink: { color: c.muted, fontSize: 12, textDecorationLine: 'underline' },
     foot: { color: c.muted, fontSize: 12, marginTop: 28, lineHeight: 18 },
     meta: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', gap: 8 },
     metaText: { color: c.muted, fontSize: 13, flexShrink: 1 },
@@ -69,7 +71,22 @@ function Button({ s, label, onPress, primary, disabled }) {
   );
 }
 
-function Shell({ colors, children }) {
+// Rodapé fixo em baixo no ecrã: "Preferências de anúncios" por cima e a faixa de anúncio por baixo.
+function AdFooter({ s, adsReady, onAdPrivacy }) {
+  if (!adsReady) return null;
+  return (
+    <View style={s.adBar}>
+      {onAdPrivacy ? (
+        <Pressable accessibilityRole="button" onPress={onAdPrivacy} style={{ paddingVertical: 6, paddingHorizontal: 12 }}>
+          <Text style={s.adLink}>Preferências de anúncios</Text>
+        </Pressable>
+      ) : null}
+      <AdBanner ready={adsReady} />
+    </View>
+  );
+}
+
+function Shell({ colors, children, adsReady, onAdPrivacy }) {
   const s = useStyles(colors);
   const insets = useSafeAreaInsets();
   return (
@@ -77,9 +94,12 @@ function Shell({ colors, children }) {
       <View style={[s.header, { paddingTop: insets.top + 10 }]}>
         <Text style={s.brand}>Código da Estrada</Text>
       </View>
-      <ScrollView contentContainerStyle={[s.content, { paddingBottom: insets.bottom + 24 }]} keyboardShouldPersistTaps="handled">
+      <ScrollView contentContainerStyle={[s.content, { paddingBottom: 24 }]} keyboardShouldPersistTaps="handled" style={{ flex: 1 }}>
         {children}
       </ScrollView>
+      <View style={{ paddingBottom: insets.bottom, backgroundColor: colors.bg }}>
+        <AdFooter s={s} adsReady={adsReady} onAdPrivacy={onAdPrivacy} />
+      </View>
     </View>
   );
 }
@@ -87,7 +107,7 @@ function Shell({ colors, children }) {
 export function Home({ colors, store, total, categories, wrongCount, examSize, onStart, adsReady, onAdPrivacy }) {
   const s = useStyles(colors);
   return (
-    <Shell colors={colors}>
+    <Shell colors={colors} adsReady={adsReady} onAdPrivacy={onAdPrivacy}>
       <Text style={s.h1}>Treina para o exame de código</Text>
       <Text style={s.lead}>{total} perguntas com explicação. Grátis, sem registo.</Text>
 
@@ -110,17 +130,10 @@ export function Home({ colors, store, total, categories, wrongCount, examSize, o
         ))}
       </View>
 
-      <AdBanner ready={adsReady} />
-
       <Text style={s.foot}>
         Conteúdo informativo e de treino. Não substitui o manual oficial nem a legislação em vigor: confirma sempre no IMT (imt-ip.pt).
         {'\n'}Sem registo. A app mostra anúncios (Google AdMob). O teu progresso fica guardado apenas neste dispositivo.
       </Text>
-      {adsReady ? (
-        <Pressable accessibilityRole="button" onPress={onAdPrivacy} style={{ paddingVertical: 8 }}>
-          <Text style={[s.foot, { marginTop: 0, textDecorationLine: 'underline' }]}>Preferências de anúncios</Text>
-        </Pressable>
-      ) : null}
     </Shell>
   );
 }
@@ -166,12 +179,12 @@ export function Quiz({ colors, session, onAnswer, onNext, onExit }) {
   );
 }
 
-export function Result({ colors, session, result, passRatio, onAgain, onHome, adsReady }) {
+export function Result({ colors, session, result, passRatio, onAgain, onHome, adsReady, onAdPrivacy }) {
   const s = useStyles(colors);
   const exam = session.mode === 'exam';
   const { total, right, wrongItems, passed } = result;
   return (
-    <Shell colors={colors}>
+    <Shell colors={colors} adsReady={adsReady} onAdPrivacy={onAdPrivacy}>
       <Text style={s.metaText}>{session.label}</Text>
       <Text style={[s.score, exam && (passed ? s.pass : s.fail)]}>{right}/{total}</Text>
       {exam ? (
@@ -198,8 +211,6 @@ export function Result({ colors, session, result, passRatio, onAgain, onHome, ad
       ) : (
         <Text style={s.lead}>Sem erros. Excelente!</Text>
       )}
-
-      <AdBanner ready={adsReady} />
 
       <Button s={s} primary label="Repetir" onPress={onAgain} />
       <Button s={s} label="Início" onPress={onHome} />
