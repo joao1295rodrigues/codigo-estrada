@@ -1,0 +1,34 @@
+name: Limpar APKs antigos
+
+# Apaga da versão "apk-latest" os APKs de teste que já não servem e atualiza a descrição.
+# Arranque manual: Actions → Limpar APKs antigos → Run workflow.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  limpar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Apagar APKs de diagnóstico e atualizar a descrição
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+        run: |
+          for n in codigo-estrada-diagnostico.apk codigo-estrada-diagnostico-sem-provider.apk codigo-estrada-nativo.apk; do
+            id=$(gh api "repos/$REPO/releases/tags/apk-latest" --jq ".assets[] | select(.name==\"$n\") | .id")
+            if [ -n "$id" ]; then
+              gh api -X DELETE "repos/$REPO/releases/assets/$id" && echo "apagado: $n"
+            else
+              echo "já não existe: $n"
+            fi
+          done
+          rid=$(gh api "repos/$REPO/releases/tags/apk-latest" --jq .id)
+          gh api -X PATCH "repos/$REPO/releases/$rid" -f body="APKs da app Código da Estrada (Android). Descarrega o ficheiro, abre-o no telemóvel e, se o Android pedir, permite instalar de fontes desconhecidas.
+          - codigo-estrada.apk: versão com anúncios.
+          - codigo-estrada-sem-anuncios.apk: versão sem anúncios.
+          Compilado automaticamente a partir do código deste repositório." > /dev/null && echo "descrição atualizada"
+          echo "--- ficheiros que ficam ---"
+          gh api "repos/$REPO/releases/tags/apk-latest" --jq '.assets[].name'
