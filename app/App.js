@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { BackHandler, useColorScheme } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -37,6 +37,7 @@ export default function App() {
   const [kind, setKind] = useState(null);
   const [finished, setFinished] = useState(false);
   const [adsReady, setAdsReady] = useState(false);
+  const lastInterstitialAt = useRef(0); // quando foi mostrado o último anúncio de ecrã inteiro
 
   // Carrega o progresso guardado no telemóvel.
   useEffect(() => {
@@ -93,7 +94,9 @@ export default function App() {
       const done = store.sessions + 1;
       persist({ ...store, sessions: done });
       setFinished(true);
-      if (shouldShowInterstitial(done, CONFIG.interstitialEvery)) showInterstitialIfReady();
+      if (shouldShowInterstitial(done, CONFIG.interstitialEvery, lastInterstitialAt.current, Date.now(), CONFIG.interstitialMinGapMs)) {
+        if (showInterstitialIfReady()) lastInterstitialAt.current = Date.now();
+      }
     }
   }, [session, store, persist]);
 

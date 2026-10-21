@@ -49,5 +49,6 @@ export const results = (session, passRatio) => {
 
 export const percent = (store) => (store.answered ? Math.round((store.correct / store.answered) * 100) : 0);
 
-// Anúncio de ecrã inteiro: só depois de concluir uma sessão, e não a todas.
-export const shouldShowInterstitial = (sessionsDone, every = 3) => sessionsDone > 0 && sessionsDone % every === 0;
+// Anúncio de ecrã inteiro: só no fim de um teste, de N em N testes e nunca em menos de minGapMs desde o último.
+export const shouldShowInterstitial = (sessionsDone, every = 3, lastShownAt = 0, now = Date.now(), minGapMs = 5 * 60 * 1000) =>
+  sessionsDone > 0 && sessionsDone % every === 0 && now - lastShownAt >= minGapMs;

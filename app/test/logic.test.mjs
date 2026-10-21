@@ -65,4 +65,10 @@ assert.equal(percent(initialStore), 0);
 // anúncio de ecrã inteiro: nunca à 1.ª nem à 2.ª sessão, e só de 3 em 3
 assert.deepEqual([0, 1, 2, 3, 4, 5, 6].map((n) => shouldShowInterstitial(n, 3)), [false, false, false, true, false, false, true]);
 
+// intervalo mínimo: de 3 em 3 testes, mas nunca em menos de 5 minutos desde o último
+const MIN = 5 * 60 * 1000, T = 1_000_000_000;
+assert.equal(shouldShowInterstitial(3, 3, T - 2 * 60 * 1000, T, MIN), false, 'ainda só passaram 2 min');
+assert.equal(shouldShowInterstitial(3, 3, T - 6 * 60 * 1000, T, MIN), true, 'já passaram 6 min');
+assert.equal(shouldShowInterstitial(4, 3, T - 60 * 60 * 1000, T, MIN), false, 'não é múltiplo de 3');
+
 console.log('lógica: todos os testes passaram');

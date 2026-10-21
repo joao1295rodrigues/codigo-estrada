@@ -65,11 +65,14 @@ export function prepareInterstitial() {
   if (!interstitial) loadInterstitial();
 }
 
+// Mostra o anúncio de ecrã inteiro se já estiver carregado. Devolve true se o mostrou.
 export function showInterstitialIfReady() {
   if (interstitial && interstitialReady) {
     interstitialReady = false;
     interstitial.show().catch(() => {});
+    return true;
   }
+  return false;
 }
 
 export function AdBanner({ ready }) {
