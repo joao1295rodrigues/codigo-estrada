@@ -6,7 +6,10 @@ const TEST_ANDROID_APP_ID = 'ca-app-pub-3940256099942544~3347511713';
 const TEST_IOS_APP_ID = 'ca-app-pub-3940256099942544~1458002511';
 const useTest = ads.useTestAds || !ads.androidAppId;
 
-module.exports = ({ config }) => ({
+module.exports = ({ config }) =>
+  process.env.NO_ADS
+    ? config // versão sem anúncios: não acrescenta o plugin do AdMob
+    : {
   ...config,
   plugins: [
     ...(config.plugins || []),
@@ -18,4 +21,4 @@ module.exports = ({ config }) => ({
       },
     ],
   ],
-});
+};

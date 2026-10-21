@@ -1,7 +1,9 @@
 name: Gerar APK
 
-# Compila a app (pasta app/) e publica o APK em "Releases". Gratuito em repositórios públicos.
-# Arranca sozinho quando a pasta app/ muda, ou manualmente em Actions → Gerar APK → Run workflow.
+# Compila a app (pasta app/) em duas versões, em paralelo, e publica os APKs em "Releases":
+#   codigo-estrada.apk               (com anúncios)
+#   codigo-estrada-sem-anuncios.apk  (sem anúncios, para diagnóstico)
+# Gratuito em repositórios públicos. Arranca sozinho quando a pasta app/ muda, ou em Actions → Gerar APK → Run workflow.
 on:
   workflow_dispatch:
   push:
@@ -20,11 +22,17 @@ concurrency:
 
 jobs:
   apk:
+    strategy:
+      fail-fast: false
+      matrix:
+        variant: [com-anuncios, sem-anuncios]
     runs-on: ubuntu-latest
     timeout-minutes: 60
     defaults:
       run:
         working-directory: app
+    env:
+      NO_ADS: ${{ matrix.variant == 'sem-anuncios' && '1' || '' }}
     steps:
       - uses: actions/checkout@v4
 
@@ -41,6 +49,12 @@ jobs:
 
       - name: Instalar dependências
         run: npm ci
+
+      - name: Versão sem anúncios (remove o SDK do AdMob)
+        if: matrix.variant == 'sem-anuncios'
+        run: |
+          npm uninstall react-native-google-mobile-ads --no-save
+          cp src/ads.stub.js src/ads.js
 
       - name: Sincronizar perguntas do site
         run: npm run sync
@@ -64,12 +78,26 @@ jobs:
         run: ./gradlew assembleRelease --no-daemon
 
       - name: Preparar o ficheiro
-        run: cp android/app/build/outputs/apk/release/app-release.apk codigo-estrada.apk
+        run: |
+          if [ "${{ matrix.variant }}" = "sem-anuncios" ]; then N=codigo-estrada-sem-anuncios.apk; else N=codigo-estrada.apk; fi
+          cp android/app/build/outputs/apk/release/app-release.apk "$N"
+          echo "APK_NAME=$N" >> "$GITHUB_ENV"
 
       - uses: actions/upload-artifact@v4
         with:
-          name: codigo-estrada-apk
-          path: app/codigo-estrada.apk
+          name: apk-${{ matrix.variant }}
+          path: app/${{ env.APK_NAME }}
+
+  publish:
+    needs: apk
+    if: ${{ !cancelled() }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: apk-*
+          path: apks
+          merge-multiple: true
 
       - name: Publicar em Releases
         uses: softprops/action-gh-release@v2
@@ -77,7 +105,9 @@ jobs:
           tag_name: apk-latest
           name: Código da Estrada (APK)
           body: |
-            APK da app Código da Estrada (Android). Descarrega o ficheiro `codigo-estrada.apk`, abre-o no telemóvel e, se o Android pedir, permite instalar de fontes desconhecidas.
+            APKs da app Código da Estrada (Android). Descarrega o ficheiro, abre-o no telemóvel e, se o Android pedir, permite instalar de fontes desconhecidas.
+            - `codigo-estrada.apk`: versão com anúncios.
+            - `codigo-estrada-sem-anuncios.apk`: versão sem anúncios (diagnóstico).
             Compilado automaticamente a partir do código deste repositório.
-          files: app/codigo-estrada.apk
+          files: apks/*.apk
           make_latest: true
