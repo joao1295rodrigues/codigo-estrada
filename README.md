@@ -6,6 +6,7 @@ Site gratuito de treino para o exame teórico de condução em Portugal: simulac
 - Perguntas: `questions.js` · Configuração (email e AdSense): `config.js`
 - Gerar o site: `OUT_DIR=docs node build.js https://ENDERECO-DO-SITE` (escreve na pasta `docs/`)
 - App Android (React Native/Expo): pasta `app/` · APK em Releases
-- Guias (artigos): `guias.js` · Notas do projeto: `PASSOS.md`, `REVISAO-SINALIZACAO.md`
+- Guias (artigos): `guias.js`
+- **Notas do projeto (começar por `notas/00-LEIA-PRIMEIRO.md`)**
 
 Conteúdo informativo e de treino. Não substitui o manual oficial; confirma sempre no IMT.
