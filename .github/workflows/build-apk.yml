@@ -1,8 +1,9 @@
 name: Gerar APK
 
-# Compila a app (pasta app/) em duas versões, em paralelo, e publica os APKs em "Releases":
+# Compila a app (pasta app/) em três versões, em paralelo, e publica os APKs em "Releases":
 #   codigo-estrada.apk               (com anúncios)
-#   codigo-estrada-sem-anuncios.apk  (sem anúncios, para diagnóstico)
+#   codigo-estrada-sem-anuncios.apk  (sem anúncios)
+#   codigo-estrada-diagnostico.apk   (ecrã de diagnóstico dos anúncios)
 # Gratuito em repositórios públicos. Arranca sozinho quando a pasta app/ muda, ou em Actions → Gerar APK → Run workflow.
 on:
   workflow_dispatch:
@@ -25,7 +26,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        variant: [com-anuncios, sem-anuncios]
+        variant: [com-anuncios, sem-anuncios, diagnostico]
     runs-on: ubuntu-latest
     timeout-minutes: 60
     defaults:
@@ -55,6 +56,12 @@ jobs:
         run: |
           npm uninstall react-native-google-mobile-ads --no-save
           cp src/ads.stub.js src/ads.js
+          cp src/Diagnostic.stub.js src/Diagnostic.js
+
+      - name: Versão de diagnóstico (abre o ecrã de diagnóstico dos anúncios)
+        if: matrix.variant == 'diagnostico'
+        run: |
+          printf '{"mode":"diagnostico"}' > src/adsmode.json
 
       - name: Sincronizar perguntas do site
         run: npm run sync
@@ -79,7 +86,11 @@ jobs:
 
       - name: Preparar o ficheiro
         run: |
-          if [ "${{ matrix.variant }}" = "sem-anuncios" ]; then N=codigo-estrada-sem-anuncios.apk; else N=codigo-estrada.apk; fi
+          case "${{ matrix.variant }}" in
+            sem-anuncios) N=codigo-estrada-sem-anuncios.apk ;;
+            diagnostico) N=codigo-estrada-diagnostico.apk ;;
+            *) N=codigo-estrada.apk ;;
+          esac
           cp android/app/build/outputs/apk/release/app-release.apk "$N"
           echo "APK_NAME=$N" >> "$GITHUB_ENV"
 
@@ -107,7 +118,8 @@ jobs:
           body: |
             APKs da app Código da Estrada (Android). Descarrega o ficheiro, abre-o no telemóvel e, se o Android pedir, permite instalar de fontes desconhecidas.
             - `codigo-estrada.apk`: versão com anúncios.
-            - `codigo-estrada-sem-anuncios.apk`: versão sem anúncios (diagnóstico).
+            - `codigo-estrada-sem-anuncios.apk`: versão sem anúncios.
+            - `codigo-estrada-diagnostico.apk`: ecrã de diagnóstico dos anúncios (para descobrir erros).
             Compilado automaticamente a partir do código deste repositório.
           files: apks/*.apk
           make_latest: true
