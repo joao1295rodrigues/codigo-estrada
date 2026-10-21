@@ -1,0 +1,116 @@
+name: Diagnóstico em emulador
+
+# Corre a app num emulador Android 16 e guarda os registos do que acontece (erros, ecrã).
+# Os registos ficam no ramo "diag-logs", pasta diagnostico/. Arranque manual: Actions → Diagnóstico em emulador → Run workflow.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  teste:
+    strategy:
+      fail-fast: false
+      matrix:
+        variant: [sem-anuncios, nativo, com-anuncios]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    defaults:
+      run:
+        working-directory: app
+    env:
+      NO_ADS: ${{ matrix.variant == 'sem-anuncios' && '1' || '' }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: app/package-lock.json
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+
+      - name: Instalar dependências
+        run: npm ci
+
+      - name: Versão sem anúncios (remove o SDK do AdMob)
+        if: matrix.variant == 'sem-anuncios'
+        run: |
+          npm uninstall react-native-google-mobile-ads --no-save
+          cp src/ads.stub.js src/ads.js
+          cp src/Diagnostic.stub.js src/Diagnostic.js
+
+      - name: Versão "nativo" (SDK incluído, mas o código JS não o usa)
+        if: matrix.variant == 'nativo'
+        run: |
+          cp src/ads.stub.js src/ads.js
+          cp src/Diagnostic.stub.js src/Diagnostic.js
+
+      - name: Sincronizar perguntas do site
+        run: npm run sync
+
+      - name: Gerar o projeto Android
+        run: npx expo prebuild --platform android --no-install
+        env:
+          CI: '1'
+          EXPO_NO_TELEMETRY: '1'
+
+      - name: Compilar para o emulador (x86_64)
+        run: |
+          sed -i 's/^reactNativeArchitectures=.*/reactNativeArchitectures=x86_64/' android/gradle.properties
+          sed -i 's/^org.gradle.jvmargs=.*/org.gradle.jvmargs=-Xmx4096m -XX:MaxMetaspaceSize=1024m/' android/gradle.properties
+          cd android && ./gradlew assembleRelease --no-daemon
+
+      - name: Ativar KVM (emulador rápido)
+        working-directory: .
+        run: |
+          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
+          sudo udevadm control --reload-rules
+          sudo udevadm trigger --name-match=kvm
+
+      - name: Correr a app no emulador Android 16
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 36
+          target: google_apis
+          arch: x86_64
+          profile: pixel_6
+          disable-animations: true
+          emulator-options: -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
+          script: bash scripts/emulator-test.sh app/android/app/build/outputs/apk/release/app-release.apk logs/${{ matrix.variant }}
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: logs-${{ matrix.variant }}
+          path: logs
+
+  coletar:
+    needs: teste
+    if: ${{ !cancelled() }}
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: logs-*
+          path: logs
+
+      - name: Publicar os registos no ramo diag-logs
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@users.noreply.github.com"
+          git checkout --orphan diag-logs
+          git rm -rf . > /dev/null 2>&1 || true
+          mkdir -p diagnostico
+          cp -r logs/* diagnostico/
+          find diagnostico -type f -size +900k -name "logcat-completo.txt" -exec sh -c 'tail -c 800000 "$1" > "$1.tmp" && mv "$1.tmp" "$1"' _ {} \;
+          git add diagnostico
+          git commit -m "Registos do emulador"
+          git push -f origin diag-logs
