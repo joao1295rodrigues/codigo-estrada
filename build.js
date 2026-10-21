@@ -217,7 +217,11 @@ write(".nojekyll", "");
 // robots, sitemap, ads.txt, 404
 write("robots.txt", `User-agent: *\nAllow: /\nSitemap: ${SITE}/sitemap.xml\n`);
 write("sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map((u) => `  <url><loc>${SITE}/${u}</loc></url>`).join("\n")}\n</urlset>\n`);
-if (CONFIG.adClient) {
+if (CONFIG.adsTxt) {
+  // Linha dada pelo Google. O mesmo conteúdo serve para ads.txt (sites) e app-ads.txt (apps).
+  write("ads.txt", `${CONFIG.adsTxt}\n`);
+  write("app-ads.txt", `${CONFIG.adsTxt}\n`);
+} else if (CONFIG.adClient) {
   write("ads.txt", `google.com, ${CONFIG.adClient.replace(/^ca-/, "")}, DIRECT, f08c47fec0942fa0\n`);
 } else {
   warnings.push("adClient vazio: sem anúncios e sem ads.txt (normal até o AdSense aprovar o site).");
