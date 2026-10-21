@@ -28,7 +28,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        variant: [com-anuncios, sem-anuncios]
+        variant: [com-anuncios, sem-anuncios, anuncios-de-teste]
     runs-on: ubuntu-latest
     timeout-minutes: 60
     defaults:
@@ -72,6 +72,11 @@ jobs:
         run: |
           printf '{"mode":"diagnostico"}' > src/adsmode.json
 
+      - name: Versão com anúncios de TESTE da Google
+        if: matrix.variant == 'anuncios-de-teste'
+        run: |
+          node -e "const fs=require('fs');const c=JSON.parse(fs.readFileSync('ads.config.json','utf8'));c.useTestAds=true;fs.writeFileSync('ads.config.json',JSON.stringify(c,null,2))"
+
       - name: Sincronizar perguntas do site
         run: npm run sync
 
@@ -97,6 +102,7 @@ jobs:
         run: |
           case "${{ matrix.variant }}" in
             sem-anuncios) N=codigo-estrada-sem-anuncios.apk ;;
+            anuncios-de-teste) N=codigo-estrada-anuncios-de-teste.apk ;;
             diagnostico) N=codigo-estrada-diagnostico.apk ;;
             nativo) N=codigo-estrada-nativo.apk ;;
             diagnostico-sem-provider) N=codigo-estrada-diagnostico-sem-provider.apk ;;
@@ -130,6 +136,7 @@ jobs:
             APKs da app Código da Estrada (Android). Descarrega o ficheiro, abre-o no telemóvel e, se o Android pedir, permite instalar de fontes desconhecidas.
             - `codigo-estrada.apk`: versão com anúncios.
             - `codigo-estrada-sem-anuncios.apk`: versão sem anúncios.
+            - `codigo-estrada-anuncios-de-teste.apk`: com anúncios de TESTE da Google (aparecem sempre, com a legenda "Test Ad"; servem para confirmar que os anúncios funcionam).
             - `codigo-estrada-diagnostico.apk`: ecrã de diagnóstico dos anúncios (para descobrir erros).
             - `codigo-estrada-nativo.apk`: SDK de anúncios incluído, mas sem o usar no código (diagnóstico).
             - `codigo-estrada-diagnostico-sem-provider.apk`: diagnóstico, com o arranque automático do SDK desligado.
