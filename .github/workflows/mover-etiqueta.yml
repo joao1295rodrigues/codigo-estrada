@@ -1,0 +1,19 @@
+name: Mover etiqueta apk-latest
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  mover:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Apontar apk-latest para o commit atual
+        run: |
+          git config user.name "joao1295rodrigues"
+          git config user.email "156375496+joao1295rodrigues@users.noreply.github.com"
+          git tag -f apk-latest "$GITHUB_SHA"
+          git push -f origin refs/tags/apk-latest
