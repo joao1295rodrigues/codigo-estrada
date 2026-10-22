@@ -20,9 +20,10 @@
 3. Só depois decidir mudanças (ver abaixo).
 
 ## Porque ainda não há anúncios (2026-10-23)
-- Capturas do AdMob: a app está **"Em preparação"**, com 0 pedidos e 0 impressões. Em Pagamentos não há nenhum aviso. O separador **Validação** diz só que a identidade será pedida **quando os ganhos atingirem o limite**, por isso **não há nada a fazer agora** (não é preciso cartão nem IBAN neste momento).
-- Hipótese anterior (falta de método de pagamento/verificação como causa) **não se confirmou**. Explicação mais provável: a app ainda não foi aprovada/está em preparação no AdMob (talvez só fique completa com a app numa loja). Isto **não está confirmado**.
-- Próximos passos: esperar ~24 h; testar noutros telemóveis; se não houver anúncios, instalar `codigo-estrada-anuncios-de-teste.apk` (tem de mostrar "Test Ad"); se nem esses, investigar no emulador.
+- Capturas do AdMob: a app está **"Em preparação"**, com 0 pedidos e 0 impressões.
+- Duas coisas diferentes no AdMob → Pagamentos: (1) **Validação** de identidade, só pedida quando os ganhos atingem o limite (nada a fazer agora); (2) **Informações de pagamento** (tipo de conta Individual, nome, morada, dados fiscais, método de pagamento): segundo a ajuda do AdMob, é preciso preencher para a conta ser **aprovada para publicar anúncios**. Isto faz-se na conta, no site do AdMob (Pagamentos → "Configurar os pagamentos" / "Gerir definições"), não na app.
+- **Por confirmar:** se esta parte está incompleta na conta do dono (as capturas vistas estavam cortadas em cima). O dono preenche tudo sozinho; **nunca escrever aqui NIF, IBAN, morada, telefone ou email de pagamentos**.
+- Depois: esperar ~24 h, testar noutros telemóveis; se não houver anúncios, `codigo-estrada-anuncios-de-teste.apk` ("Test Ad"); se nem esses, investigar no emulador.
 
 ## Autoria (2026-10-22)
 - A pedido do dono, o histórico do `main` foi reescrito: todos os commits são de `joao1295rodrigues` (email privado `…@users.noreply.github.com`), sem linhas de co-autoria. A etiqueta `apk-latest` foi movida para o commit atual (fluxo `mover-etiqueta.yml`, que se pode apagar). Release e APK intactos.
