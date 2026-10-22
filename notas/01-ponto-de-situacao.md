@@ -19,9 +19,10 @@
 2. Ver no AdMob (Início/Relatórios) se aparecem pedidos de anúncio, visualizações e ganhos.
 3. Só depois decidir mudanças (ver abaixo).
 
-## Provável causa de não haver anúncios (2026-10-23)
-- Segundo a ajuda do AdMob, sem **dados de pagamento / verificação de identidade** a conta não está pronta para monetização: os anúncios não aparecem e a app não é revista. A verificação tem prazo de 45 dias desde o primeiro pedido. Isto **não está confirmado** na conta do dono (nenhum ecrã visto).
-- O dono vai adicionar o método de pagamento em AdMob → Pagamentos (sozinho, no site do Google; **nunca escrever aqui IBAN, NIF, morada nem documentos**). Depois: esperar cerca de 24 h e testar de novo.
+## Porque ainda não há anúncios (2026-10-23)
+- Capturas do AdMob: a app está **"Em preparação"**, com 0 pedidos e 0 impressões. Em Pagamentos não há nenhum aviso. O separador **Validação** diz só que a identidade será pedida **quando os ganhos atingirem o limite**, por isso **não há nada a fazer agora** (não é preciso cartão nem IBAN neste momento).
+- Hipótese anterior (falta de método de pagamento/verificação como causa) **não se confirmou**. Explicação mais provável: a app ainda não foi aprovada/está em preparação no AdMob (talvez só fique completa com a app numa loja). Isto **não está confirmado**.
+- Próximos passos: esperar ~24 h; testar noutros telemóveis; se não houver anúncios, instalar `codigo-estrada-anuncios-de-teste.apk` (tem de mostrar "Test Ad"); se nem esses, investigar no emulador.
 
 ## Autoria (2026-10-22)
 - A pedido do dono, o histórico do `main` foi reescrito: todos os commits são de `joao1295rodrigues` (email privado `…@users.noreply.github.com`), sem linhas de co-autoria. A etiqueta `apk-latest` foi movida para o commit atual (fluxo `mover-etiqueta.yml`, que se pode apagar). Release e APK intactos.
