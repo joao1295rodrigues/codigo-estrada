@@ -19,6 +19,10 @@
 2. Ver no AdMob (Início/Relatórios) se aparecem pedidos de anúncio, visualizações e ganhos.
 3. Só depois decidir mudanças (ver abaixo).
 
+## Autoria (2026-10-22)
+- A pedido do dono, o histórico do `main` foi reescrito: todos os commits são de `joao1295rodrigues` (email privado `…@users.noreply.github.com`), sem linhas de co-autoria. A etiqueta `apk-latest` foi movida para o commit atual (fluxo `mover-etiqueta.yml`, que se pode apagar). Release e APK intactos.
+- Regra no `CLAUDE.md`: commits sempre no nome do dono, sem atribuições. Se clonaste o repositório antes desta data, volta a clonar.
+
 ## Legalidade (2026-10-22)
 - Criada `notas/09-legalidade.md` (plágio, imagens, RGPD, licenças, pendentes). Perguntas são texto próprio; ainda sem imagens de terceiros.
 - Site: página Privacidade passou a dizer que o projeto é independente e sem ligação ao IMT/ANSR. **App:** falta o mesmo aviso (adiado para depois das 24 h de teste, porque recompila o APK).
