@@ -1,6 +1,6 @@
 # Ponto de situação
 
-**Última atualização: 2026-10-21.** (Atualizar a data e o resumo a cada alteração.)
+**Última atualização: 2026-10-22.** (Atualizar a data e o resumo a cada alteração.)
 
 ## Estado em resumo
 - **Site no ar** e a funcionar: https://joao1295rodrigues.github.io/codigo-estrada/ (28 páginas: app de treino, 13 páginas de perguntas por categoria, 10 guias, Sobre, Privacidade). **Sem anúncios** (o AdSense ainda não foi pedido).
@@ -18,6 +18,10 @@
 1. **Esperar cerca de 24 horas** e depois testar em **outros telemóveis** (outras operadoras, sem o email dele) se aparecem anúncios. **Sem clicar** nos anúncios.
 2. Ver no AdMob (Início/Relatórios) se aparecem pedidos de anúncio, visualizações e ganhos.
 3. Só depois decidir mudanças (ver abaixo).
+
+## Legalidade (2026-10-22)
+- Criada `notas/09-legalidade.md` (plágio, imagens, RGPD, licenças, pendentes). Perguntas são texto próprio; ainda sem imagens de terceiros.
+- Site: página Privacidade passou a dizer que o projeto é independente e sem ligação ao IMT/ANSR. **App:** falta o mesmo aviso (adiado para depois das 24 h de teste, porque recompila o APK).
 
 ## Pendentes e decisões adiadas (só se começarem a aparecer anúncios/ganhos)
 - Mostrar a faixa também **durante os testes**? (O dono quer; cuidado com cliques acidentais; ver `03` e `05`.)

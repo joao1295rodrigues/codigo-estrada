@@ -207,6 +207,7 @@ write("privacidade.html", page({
     <p>Mais informação: <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">como o Google utiliza dados de sites parceiros</a> e <a href="https://adssettings.google.com" target="_blank" rel="noopener">definições de anúncios do Google</a>.</p>
     <h2>Aviso</h2>
     <p>O conteúdo deste site é informativo e de treino. Pode conter erros ou estar desatualizado face à legislação. Não substitui o manual oficial nem o ensino numa escola de condução.</p>
+    <p>Este projeto é independente e não tem qualquer ligação ao IMT, à ANSR ou a outras entidades oficiais. As perguntas e explicações são textos próprios, escritos com base na legislação; não são cópias de exames, manuais ou sites de terceiros.</p>
 ${hasEmail ? `    <h2>Contacto</h2>
     <p>Para questões sobre privacidade ou correções: <strong>${email}</strong>.</p>` : ""}`,
 }));
