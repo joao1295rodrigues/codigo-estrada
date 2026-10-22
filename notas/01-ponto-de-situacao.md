@@ -1,6 +1,6 @@
 # Ponto de situação
 
-**Última atualização: 2026-10-22.** (Atualizar a data e o resumo a cada alteração.)
+**Última atualização: 2026-10-23.** (Atualizar a data e o resumo a cada alteração.)
 
 ## Estado em resumo
 - **Site no ar** e a funcionar: https://joao1295rodrigues.github.io/codigo-estrada/ (28 páginas: app de treino, 13 páginas de perguntas por categoria, 10 guias, Sobre, Privacidade). **Sem anúncios** (o AdSense ainda não foi pedido).
@@ -18,6 +18,10 @@
 1. **Esperar cerca de 24 horas** e depois testar em **outros telemóveis** (outras operadoras, sem o email dele) se aparecem anúncios. **Sem clicar** nos anúncios.
 2. Ver no AdMob (Início/Relatórios) se aparecem pedidos de anúncio, visualizações e ganhos.
 3. Só depois decidir mudanças (ver abaixo).
+
+## Provável causa de não haver anúncios (2026-10-23)
+- Segundo a ajuda do AdMob, sem **dados de pagamento / verificação de identidade** a conta não está pronta para monetização: os anúncios não aparecem e a app não é revista. A verificação tem prazo de 45 dias desde o primeiro pedido. Isto **não está confirmado** na conta do dono (nenhum ecrã visto).
+- O dono vai adicionar o método de pagamento em AdMob → Pagamentos (sozinho, no site do Google; **nunca escrever aqui IBAN, NIF, morada nem documentos**). Depois: esperar cerca de 24 h e testar de novo.
 
 ## Autoria (2026-10-22)
 - A pedido do dono, o histórico do `main` foi reescrito: todos os commits são de `joao1295rodrigues` (email privado `…@users.noreply.github.com`), sem linhas de co-autoria. A etiqueta `apk-latest` foi movida para o commit atual (fluxo `mover-etiqueta.yml`, que se pode apagar). Release e APK intactos.
