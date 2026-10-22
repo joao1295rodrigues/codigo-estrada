@@ -28,6 +28,7 @@
 - Texto de ajuda do AdMob (ponto de interrogação em "Estado de aprovação"): numa conta recente as apps ficam "Em preparação" **até a conta ser verificada**, o que passa por inserir os detalhes da forma de pagamento (há um link no próprio texto). Por confirmar se já ficou feito.
 - Provável limitação: o Google trata apps **sem loja suportada** com serviço de anúncios limitado (poucos/pouco valor ou nenhum). Fontes: ajuda do AdMob + relatos de programadores; **nenhuma diz com clareza o que acontece a um APK instalado à mão**.
 - **Plano combinado com o dono:** esperar até 2026-10-24; se continuar "Em preparação"/sem anúncios, **pesquisar e tentar a Amazon Appstore** (grátis?). Antes de mexer, verificar custos, requisitos e se aceita a app. A Google Play (25 €) só se houver ganhos.
+- Perfil de pagamentos do AdMob (2026-10-23): país PT, tipo **Individual**, nome, telefone e morada preenchidos; pagamento mensal com limite de 70 €. **Informações fiscais (PT e EUA) vazias**: o Google não as exigiu (o aviso de PT está avariado); preencher só se for pedido, antes dos primeiros pagamentos. O telefone não mostrou botão de verificação nem SMS.
 - Depois: esperar ~24 h, testar noutros telemóveis; se não houver anúncios, `codigo-estrada-anuncios-de-teste.apk` ("Test Ad"); se nem esses, investigar no emulador.
 
 ## Autoria (2026-10-22)
