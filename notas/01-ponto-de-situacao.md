@@ -23,6 +23,7 @@
 - Capturas do AdMob: a app está **"Em preparação"**, com 0 pedidos e 0 impressões.
 - Duas coisas diferentes no AdMob → Pagamentos: (1) **Validação** de identidade, só pedida quando os ganhos atingem o limite (nada a fazer agora); (2) **Informações de pagamento** (tipo de conta Individual, nome, morada, dados fiscais, método de pagamento): segundo a ajuda do AdMob, é preciso preencher para a conta ser **aprovada para publicar anúncios**. Isto faz-se na conta, no site do AdMob (Pagamentos → "Configurar os pagamentos" / "Gerir definições"), não na app.
 - **Por confirmar:** se esta parte está incompleta na conta do dono (as capturas vistas estavam cortadas em cima). O dono preenche tudo sozinho; **nunca escrever aqui NIF, IBAN, morada, telefone ou email de pagamentos**.
+- **Facto dado pelo dono:** no Google dele o método de pagamento é um **cartão bancário** (não IBAN/NIB). Usa um **cartão virtual** com limite baixo, em nome dele. A 2026-10-23 trocou o cartão expirado do aviso em https://pay.google.com/gp/w/home/paymentmethods por um válido. Não se sabe se isto desbloqueia a app "Em preparação". **Não escrever aqui números de cartão.**
 - Depois: esperar ~24 h, testar noutros telemóveis; se não houver anúncios, `codigo-estrada-anuncios-de-teste.apk` ("Test Ad"); se nem esses, investigar no emulador.
 
 ## Autoria (2026-10-22)
