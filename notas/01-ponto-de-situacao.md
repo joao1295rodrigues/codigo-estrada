@@ -1,6 +1,6 @@
 # Ponto de situação
 
-**Última atualização: 2026-10-23.** (Atualizar a data e o resumo a cada alteração.)
+**Última atualização: 2026-10-23 (noite).** (Atualizar a data e o resumo a cada alteração.)
 
 ## Estado em resumo
 - **Site no ar** e a funcionar: https://joao1295rodrigues.github.io/codigo-estrada/ (28 páginas: app de treino, 13 páginas de perguntas por categoria, 10 guias, Sobre, Privacidade). **Sem anúncios** (o AdSense ainda não foi pedido).
@@ -29,6 +29,7 @@
 - Provável limitação: o Google trata apps **sem loja suportada** com serviço de anúncios limitado (poucos/pouco valor ou nenhum). Fontes: ajuda do AdMob + relatos de programadores; **nenhuma diz com clareza o que acontece a um APK instalado à mão**.
 - **Plano combinado com o dono:** esperar até 2026-10-24; se continuar "Em preparação"/sem anúncios, **pesquisar e tentar a Amazon Appstore** (grátis?). Antes de mexer, verificar custos, requisitos e se aceita a app. A Google Play (25 €) só se houver ganhos.
 - Perfil de pagamentos do AdMob (2026-10-23): país PT, tipo **Individual**, nome, telefone e morada preenchidos; pagamento mensal com limite de 70 €. **Informações fiscais (PT e EUA) vazias**: o Google não as exigiu (o aviso de PT está avariado); preencher só se for pedido, antes dos primeiros pagamentos. O telefone não mostrou botão de verificação nem SMS.
+- **app-ads.txt:** o AdMob procura-o na **raiz** do site (`https://joao1295rodrigues.github.io/app-ads.txt`). O nosso ficheiro está em `/codigo-estrada/app-ads.txt` (subpasta, não serve). Solução grátis: segundo repositório **público** `joao1295rodrigues.github.io` com um ficheiro `app-ads.txt` com a linha `google.com, pub-9348535205156836, DIRECT, f08c47fec0942fa0`. O AdMob só chega ao site através do **"site do programador" da página da app numa loja** (Amazon/Google Play): sem loja não lê. Por isso a ligação à loja só se faz quando a app estiver mesmo publicada. Prazos de aprovação "24–48 h" **não confirmados**. Por criar pelo dono (a sessão na nuvem não tem acesso).
 - Depois: esperar ~24 h, testar noutros telemóveis; se não houver anúncios, `codigo-estrada-anuncios-de-teste.apk` ("Test Ad"); se nem esses, investigar no emulador.
 
 ## Autoria (2026-10-22)
