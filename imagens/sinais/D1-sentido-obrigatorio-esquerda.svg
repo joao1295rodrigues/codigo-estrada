@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="Sentido obrigatório à esquerda (D1)">
+  <title>Sentido obrigatório à esquerda (D1)</title>
+  <desc>Disco azul com seta branca a apontar para a esquerda.</desc>
+  <circle cx="100" cy="100" r="92" fill="#0b4ea2"/>
+  <circle cx="100" cy="100" r="92" fill="none" stroke="#fff" stroke-width="4" opacity="0"/>
+  <g transform="rotate(-90 100 100)" fill="#fff"><rect x="88" y="92" width="24" height="64"/><polygon points="100,38 138,96 62,96"/></g>
+</svg>

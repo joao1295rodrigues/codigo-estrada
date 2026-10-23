@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="Velocidade mínima obrigatória 70 km/h (D8)">
+  <title>Velocidade mínima obrigatória 70 km/h (D8)</title>
+  <desc>Disco azul com o número 70 a branco.</desc>
+  <circle cx="100" cy="100" r="92" fill="#0b4ea2"/>
+  <circle cx="100" cy="100" r="92" fill="none" stroke="#fff" stroke-width="4" opacity="0"/>
+  <text x="100" y="128.07999999999998" text-anchor="middle" font-size="78" font-family="Arial, Helvetica, sans-serif" font-weight="700" fill="#fff">70</text>
+</svg>

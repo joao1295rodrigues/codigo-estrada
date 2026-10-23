@@ -20,3 +20,15 @@
 - Faixa também durante os testes (cuidado com cliques acidentais; ver `03`).
 - Google Search Console para o site; divulgar em grupos de quem tira a carta.
 - Publicar a app numa loja (Google Play 25 $ + 12 testadores/14 dias, ou outra loja suportada) só se for necessário para os anúncios reais e o dono aceitar o custo.
+
+
+## Melhorias da app a considerar (2026-10-24, por decidir com o dono)
+1. **Imagem do sinal em cada pergunta de sinalização** (começar pelos 25 desenhos de `imagens/sinais/`). Na app e no site.
+2. **Modo "Sinais"**: treino só com imagem (identificar o sinal), com respostas de escolha múltipla.
+3. **Estatísticas por categoria** (percentagem de certas) e sugestão de "o que rever hoje".
+4. **Repetição espaçada**: voltar a mostrar mais cedo as perguntas erradas.
+5. **Simulacro com tempo** e contagem de erros como no exame (critério a confirmar antes de afirmar).
+6. **Modo noturno** (a app já segue o tema do telemóvel) e letra maior.
+7. **Partilhar o resultado** (texto simples, sem dados pessoais).
+8. **Funcionar sem rede** (já funciona; confirmar com testes).
+Prioridade sugerida: 1 → 2 → 3. Cada alteração em `app/**` recompila o APK; fazer várias de uma vez.

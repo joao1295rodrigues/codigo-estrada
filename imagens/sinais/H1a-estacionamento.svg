@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="Estacionamento (H1a)">
+  <title>Estacionamento (H1a)</title>
+  <desc>Quadrado azul com a letra P branca.</desc>
+  <rect x="12" y="12" width="176" height="176" rx="14" fill="#0b4ea2" stroke="#fff" stroke-width="6"/>
+  <text x="100" y="146" text-anchor="middle" font-size="130" font-family="Arial, Helvetica, sans-serif" font-weight="700" fill="#fff">P</text>
+</svg>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="Paragem e estacionamento proibidos (C16)">
+  <title>Paragem e estacionamento proibidos (C16)</title>
+  <desc>Disco azul com bordo vermelho e duas barras diagonais vermelhas em cruz.</desc>
+  <circle cx="100" cy="100" r="88" fill="#0b4ea2" stroke="#d71920" stroke-width="18"/>
+  <line x1="42" y1="42" x2="158" y2="158" stroke="#d71920" stroke-width="20"/>
+  <line x1="158" y1="42" x2="42" y2="158" stroke="#d71920" stroke-width="20"/>
+</svg>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="Paragem obrigatória (B2, STOP)">
+  <title>Paragem obrigatória (B2, STOP)</title>
+  <desc>Octógono vermelho com a palavra STOP a branco.</desc>
+  <polygon points="62,10 138,10 190,62 190,138 138,190 62,190 10,138 10,62" fill="#d71920" stroke="#fff" stroke-width="6"/>
+  <polygon points="64,20 136,20 180,64 180,136 136,180 64,180 20,136 20,64" fill="none" stroke="#fff" stroke-width="5"/>
+  <text x="100" y="124" text-anchor="middle" font-size="50" font-family="Arial, Helvetica, sans-serif" font-weight="700" fill="#fff">STOP</text>
+</svg>

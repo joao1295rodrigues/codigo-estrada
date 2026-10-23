@@ -1,6 +1,6 @@
 # Ponto de situação
 
-**Última atualização: 2026-10-23 (noite).** (Atualizar a data e o resumo a cada alteração.)
+**Última atualização: 2026-10-24.** (Atualizar a data e o resumo a cada alteração.)
 
 ## Estado em resumo
 - **Site no ar** e a funcionar: https://joao1295rodrigues.github.io/codigo-estrada/ (28 páginas: app de treino, 13 páginas de perguntas por categoria, 10 guias, Sobre, Privacidade). **Sem anúncios** (o AdSense ainda não foi pedido).
@@ -31,6 +31,12 @@
 - Perfil de pagamentos do AdMob (2026-10-23): país PT, tipo **Individual**, nome, telefone e morada preenchidos; pagamento mensal com limite de 70 €. **Informações fiscais (PT e EUA) vazias**: o Google não as exigiu (o aviso de PT está avariado); preencher só se for pedido, antes dos primeiros pagamentos. O telefone não mostrou botão de verificação nem SMS.
 - **app-ads.txt:** o AdMob procura-o na **raiz** do site (`https://joao1295rodrigues.github.io/app-ads.txt`). O nosso ficheiro está em `/codigo-estrada/app-ads.txt` (subpasta, não serve). Solução grátis: segundo repositório **público** `joao1295rodrigues.github.io` com um ficheiro `app-ads.txt` com a linha `google.com, pub-9348535205156836, DIRECT, f08c47fec0942fa0`. O AdMob só chega ao site através do **"site do programador" da página da app numa loja** (Amazon/Google Play): sem loja não lê. Por isso a ligação à loja só se faz quando a app estiver mesmo publicada. Prazos de aprovação "24–48 h" **não confirmados**. Por criar pelo dono (a sessão na nuvem não tem acesso).
 - Depois: esperar ~24 h, testar noutros telemóveis; se não houver anúncios, `codigo-estrada-anuncios-de-teste.apk` ("Test Ad"); se nem esses, investigar no emulador.
+
+## Teste e imagens (2026-10-24)
+- O dono testou o `codigo-estrada-anuncios-de-teste.apk` e **os anúncios de teste apareceram**: a integração da app com o AdMob funciona. A app continua "Em preparação" no AdMob; sem anúncios reais.
+- Plano: melhorar a app e preparar a publicação na **Amazon Appstore** (por verificar: custos, requisitos, se aceita a app).
+- **Imagens:** a nuvem não acede ao Wikimedia Commons nem a bancos de imagens. Foram criados **25 sinais desenhados por nós** (SVG, sem terceiros) em `imagens/sinais/` por `scripts/gerar-sinais.mjs`, com licenças e pendentes em `imagens/LICENCAS.md`. Ainda **não estão na app nem no site** (não se mexeu em `app/**`, por isso o APK não recompilou).
+- Falta: descarregar localmente imagens livres com atribuição (Commons) e desenhar os sinais complexos só depois de conferir a imagem oficial.
 
 ## Autoria (2026-10-22)
 - A pedido do dono, o histórico do `main` foi reescrito: todos os commits são de `joao1295rodrigues` (email privado `…@users.noreply.github.com`), sem linhas de co-autoria. A etiqueta `apk-latest` foi movida para o commit atual (fluxo `mover-etiqueta.yml`, que se pode apagar). Release e APK intactos.
