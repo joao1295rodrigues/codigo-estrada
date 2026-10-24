@@ -1,6 +1,6 @@
 # Ponto de situação
 
-**Última atualização: 2026-10-24 (tarde).** (Atualizar a data e o resumo a cada alteração.)
+**Última atualização: 2026-10-24 (noite).** (Atualizar a data e o resumo a cada alteração.)
 
 ## Estado em resumo
 - **Site no ar** e a funcionar: https://joao1295rodrigues.github.io/codigo-estrada/ (28 páginas: app de treino, 13 páginas de perguntas por categoria, 10 guias, Sobre, Privacidade). **Sem anúncios** (o AdSense ainda não foi pedido).
@@ -60,6 +60,15 @@
 - Testado no emulador Android 16 (commit db76402, versão com anúncios): abre, "Sinais (imagem)" mostra 40 perguntas e o sinal oficial (ex.: C3m) com as opções, sem erros. **Ainda não testado no telemóvel do dono.**
 - Preferência do dono (2026-10-24): respostas curtas, com **tabelas e estruturas simples**; quando lhe pedir uma ação, ser **muito específico** (onde clicar, o que escrever, o que devolver).
 - Os desenhos próprios são nossos (CC0 proposto). Imagens de licença pública de terceiros (fotos, sinais complexos) só podem ser descarregadas no computador do dono (ver `imagens/LICENCAS.md`).
+
+## Resumo do estado a 2026-10-24 (noite) — para retomar
+- **App:** 51 perguntas com imagem (categoria "Sinais (imagem)") + 303 perguntas de texto; APK `codigo-estrada.apk` na release `apk-latest`; as imagens aparecem no telemóvel do dono (confirmado). AdMob: anúncios de teste funcionam; anúncios reais ainda não (app "Em preparação"; sem loja ligada, o que é o estado certo).
+- **Site da raiz no ar:** https://joao1295rodrigues.github.io (página) e https://joao1295rodrigues.github.io/app-ads.txt (linha do AdMob). Repositório `joao1295rodrigues.github.io`, criado pelo dono; a sessão na nuvem não escreve lá.
+- **Lojas:** Xiaomi só aceita empresas (descartada). Samsung exige empresa. Amazon fechada em Android. **OPPO aceita particulares** (portal europeu https://developers-eu.oppomobile.com/, tipo "Individual": documento de identificação + cartão bancário; a candidatura leva 4 passos). O dono vai preencher o formulário **mais tarde**, por si, só no site da OPPO (nada de dados pessoais nas notas nem no chat). Falta ele ler o aviso "Notice on Temporary Suspension of Certain Account Functions for European..." no início do portal.
+- **Regras para o AdMob depois da OPPO:** só registar a app como publicada na OPPO **quando estiver mesmo visível na loja**; nome do pacote exato `codigo.da.estrada.R`; site do programador `https://joao1295rodrigues.github.io`. Nunca clicar nos anúncios próprios.
+- **Pendente antes de carregar na OPPO:** chave de assinatura própria (hoje o APK usa chave de teste; uma loja exige a mesma chave nas atualizações) e, se o dono quiser, o nome "Código da Estrada – Treino (não oficial)". Isto recompila o APK. Aguarda o "faz a chave" do dono. A chave nunca vai para o repositório.
+- **Outros pendentes:** decisão sobre sinais CC BY-SA (curvas, animais, rotunda, ultrapassagem; exigem crédito e partilha nas mesmas condições); testar em outros telemóveis (anúncios reais, depois de a conta/app passar); Google Play (25 USD) só se não houver outra via; informar-se nas Finanças antes de levantar dinheiro.
+- **Como comunicar com o dono:** respostas curtas, **listas numeradas simples (as tabelas aparecem mal no ecrã dele)**, um passo por linha, nomes exatos dos botões como aparecem, dizer o que deve ver depois de cada passo e pedir captura (com dados pessoais tapados) quando não vejo o ecrã. Não adivinhar menus. Commits sempre no nome do dono, sem atribuições.
 
 ## Autoria (2026-10-22)
 - A pedido do dono, o histórico do `main` foi reescrito: todos os commits são de `joao1295rodrigues` (email privado `…@users.noreply.github.com`), sem linhas de co-autoria. A etiqueta `apk-latest` foi movida para o commit atual (fluxo `mover-etiqueta.yml`, que se pode apagar). Release e APK intactos.
