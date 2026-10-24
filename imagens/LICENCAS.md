@@ -11,7 +11,7 @@
 Crianças (A14), curvas (A1a/b), passagem de peões (A16a), animais (A19a), trabalhos (A23), proibição de ultrapassar (C14a), virar à esquerda (C11b), inversão de marcha (C12), rotunda (D4), fim de todas as proibições (C20a), zona 30 (G4a), fim de localidade (N2) e marcas rodoviárias (M1, M2, M3, M8). Só desenhar quando o desenho exato estiver conferido na imagem oficial. **Não desenhar de memória.**
 
 ## `terceiros/` – sinais oficiais portugueses (domínio público / CC0)
-- 25 SVG copiados por `scripts/importar-sinais-pt.py` do repositório CC0 https://github.com/skifahrer/traffic-signs, que reúne os ficheiros do Wikimedia Commons com a licença de cada um. A tabela completa (código, nome, licença, autor, link de origem) está em `imagens/terceiros/LICENCAS.md`.
+- 36 SVG copiados por `scripts/importar-sinais-pt.py` do repositório CC0 https://github.com/skifahrer/traffic-signs, que reúne os ficheiros do Wikimedia Commons com a licença de cada um. A tabela completa (código, nome, licença, autor, link de origem) está em `imagens/terceiros/LICENCAS.md`.
 - Só se copiam ficheiros marcados nesses metadados como **Public domain** ou **CC0** (não exigem atribuição). Os 226 sinais em CC BY-SA ficaram de fora de propósito.
 - **Por confirmar por nós:** a licença vem dos metadados do repositório; convém abrir a página de origem de cada sinal antes de publicar.
 - A app usa PNG gerados destes SVG (`app/scripts/gerar-sinais-png.cjs`).
