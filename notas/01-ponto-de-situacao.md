@@ -1,6 +1,6 @@
 # Ponto de situação
 
-**Última atualização: 2026-10-24.** (Atualizar a data e o resumo a cada alteração.)
+**Última atualização: 2026-10-24 (tarde).** (Atualizar a data e o resumo a cada alteração.)
 
 ## Estado em resumo
 - **Site no ar** e a funcionar: https://joao1295rodrigues.github.io/codigo-estrada/ (28 páginas: app de treino, 13 páginas de perguntas por categoria, 10 guias, Sobre, Privacidade). **Sem anúncios** (o AdSense ainda não foi pedido).
@@ -47,6 +47,11 @@
 - (antes) Alternativas por pesquisar: **Samsung Galaxy Store** (custo, requisitos, contas pessoais) e, se houver ganhos, **Google Play** (25 € uma vez; contas pessoais novas costumam precisar de teste fechado com 12 pessoas durante 14 dias). Não avançar com nada sem o dono confirmar.
 - **Imagens:** a nuvem não acede ao Wikimedia Commons nem a bancos de imagens. Foram criados **25 sinais desenhados por nós** (SVG, sem terceiros) em `imagens/sinais/` por `scripts/gerar-sinais.mjs`, com licenças e pendentes em `imagens/LICENCAS.md`. Ainda **não estão na app nem no site** (não se mexeu em `app/**`, por isso o APK não recompilou).
 - Falta: descarregar localmente imagens livres com atribuição (Commons) e desenhar os sinais complexos só depois de conferir a imagem oficial.
+
+## Melhorias da app (2026-10-24)
+- **18 perguntas novas com a imagem do sinal** ("Qual é o significado deste sinal?"), categoria "Sinais (imagem)", só na app (não estão em `questions.js`, portanto não vão para o site). Código: `app/src/signs.js` (perguntas), `app/src/signImages.js` (imagens), `app/assets/sinais/*.png` (gerados de `imagens/sinais/*.svg` por `app/scripts/gerar-sinais-png.cjs`). A imagem aparece no teste e na revisão de erros. Ids a partir de 10000.
+- Testado: `npm test` passa e `npm run bundle` compila. **Não testado ainda num telemóvel/emulador** (a compilação do APK no GitHub Actions e o teste no emulador vêm a seguir).
+- Os desenhos são nossos (CC0 proposto), sem imagens de terceiros. Imagens de licença pública de terceiros (fotos, sinais complexos) só podem ser descarregadas no computador do dono (ver `imagens/LICENCAS.md`).
 
 ## Autoria (2026-10-22)
 - A pedido do dono, o histórico do `main` foi reescrito: todos os commits são de `joao1295rodrigues` (email privado `…@users.noreply.github.com`), sem linhas de co-autoria. A etiqueta `apk-latest` foi movida para o commit atual (fluxo `mover-etiqueta.yml`, que se pode apagar). Release e APK intactos.

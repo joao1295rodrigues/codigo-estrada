@@ -1,8 +1,9 @@
 import { useMemo } from 'react';
-import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { Image, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { percent } from './logic';
 import { AdBanner } from './ads';
+import { SIGN_IMAGES } from './signImages';
 
 const makeStyles = (c) =>
   StyleSheet.create({
@@ -35,6 +36,7 @@ const makeStyles = (c) =>
     tagText: { color: c.muted, fontSize: 12 },
     progress: { height: 6, backgroundColor: c.line, borderRadius: 99, overflow: 'hidden', marginTop: 6, marginBottom: 12 },
     progressBar: { height: 6, backgroundColor: c.brand },
+    sign: { width: 180, height: 180, alignSelf: 'center', marginTop: 8, marginBottom: 4 },
     question: { color: c.text, fontSize: 18, fontWeight: '600', marginTop: 8, marginBottom: 12, lineHeight: 25 },
     option: { backgroundColor: c.card, borderColor: c.line, borderWidth: 1, borderRadius: 12, paddingVertical: 14, paddingHorizontal: 16, marginVertical: 6 },
     optionOk: { backgroundColor: c.okBg, borderColor: c.ok },
@@ -49,6 +51,7 @@ const makeStyles = (c) =>
     verdict: { fontSize: 16, fontWeight: '700', marginBottom: 8 },
     err: { borderTopColor: c.line, borderTopWidth: 1, paddingVertical: 12 },
     errFirst: { borderTopWidth: 0 },
+    errSign: { width: 72, height: 72, marginBottom: 6 },
     errQ: { color: c.text, fontWeight: '700', marginBottom: 4 },
     errLine: { color: c.text, fontSize: 14, marginTop: 2 },
     errExpl: { color: c.muted, fontSize: 14, marginTop: 4 },
@@ -153,6 +156,9 @@ export function Quiz({ colors, session, onAnswer, onNext, onExit }) {
       </View>
       <View style={s.progress}><View style={[s.progressBar, { width: `${(session.i / total) * 100}%` }]} /></View>
 
+      {item.q.img && SIGN_IMAGES[item.q.img] ? (
+        <Image source={SIGN_IMAGES[item.q.img]} style={s.sign} resizeMode="contain" accessibilityLabel="Imagem do sinal de trânsito" />
+      ) : null}
       <Text style={s.question}>{item.q.q}</Text>
 
       {item.options.map((o, idx) => {
@@ -200,6 +206,7 @@ export function Result({ colors, session, result, passRatio, onAgain, onHome, ad
           <View style={s.card}>
             {wrongItems.map((it, n) => (
               <View key={it.q.id} style={[s.err, n === 0 && s.errFirst]}>
+                {it.q.img && SIGN_IMAGES[it.q.img] ? <Image source={SIGN_IMAGES[it.q.img]} style={s.errSign} resizeMode="contain" /> : null}
                 <Text style={s.errQ}>{it.q.q}</Text>
                 <Text style={s.errLine}>A tua resposta: {it.options[it.choice]?.text}</Text>
                 <Text style={[s.errLine, s.pass]}>Certa: {it.options.find((o) => o.ok).text}</Text>

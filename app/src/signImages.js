@@ -1,0 +1,21 @@
+// Imagens dos sinais (PNG gerados por scripts/gerar-sinais-png.cjs). O Metro exige require() estático.
+export const SIGN_IMAGES = {
+  'B1-cedencia-de-passagem': require('../assets/sinais/B1-cedencia-de-passagem.png'),
+  'B2-paragem-obrigatoria-stop': require('../assets/sinais/B2-paragem-obrigatoria-stop.png'),
+  'C1-sentido-proibido': require('../assets/sinais/C1-sentido-proibido.png'),
+  'C2-transito-proibido': require('../assets/sinais/C2-transito-proibido.png'),
+  'C13-limite-velocidade-30': require('../assets/sinais/C13-limite-velocidade-30.png'),
+  'C13-limite-velocidade-50': require('../assets/sinais/C13-limite-velocidade-50.png'),
+  'C13-limite-velocidade-90': require('../assets/sinais/C13-limite-velocidade-90.png'),
+  'C13-limite-velocidade-120': require('../assets/sinais/C13-limite-velocidade-120.png'),
+  'C15-estacionamento-proibido': require('../assets/sinais/C15-estacionamento-proibido.png'),
+  'C16-paragem-e-estacionamento-proibidos': require('../assets/sinais/C16-paragem-e-estacionamento-proibidos.png'),
+  'D1-sentido-obrigatorio-em-frente': require('../assets/sinais/D1-sentido-obrigatorio-em-frente.png'),
+  'D1-sentido-obrigatorio-direita': require('../assets/sinais/D1-sentido-obrigatorio-direita.png'),
+  'D1-sentido-obrigatorio-esquerda': require('../assets/sinais/D1-sentido-obrigatorio-esquerda.png'),
+  'D8-velocidade-minima-50': require('../assets/sinais/D8-velocidade-minima-50.png'),
+  'A29-outros-perigos': require('../assets/sinais/A29-outros-perigos.png'),
+  'A22-sinalizacao-luminosa': require('../assets/sinais/A22-sinalizacao-luminosa.png'),
+  'H1a-estacionamento': require('../assets/sinais/H1a-estacionamento.png'),
+  'H2-hospital': require('../assets/sinais/H2-hospital.png'),
+};

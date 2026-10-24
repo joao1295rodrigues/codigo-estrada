@@ -1,6 +1,8 @@
 // Testes da lógica pura. Correr: npm test
 import assert from 'node:assert/strict';
 import QUESTIONS from '../src/questions.js';
+import fs from 'node:fs';
+import { SIGN_QUESTIONS, SIGN_CATEGORY } from '../src/signs.js';
 import { answer, buildSession, categoriesOf, initialStore, percent, results, shouldShowInterstitial, shuffle } from '../src/logic.js';
 
 const seeded = (seed = 1) => () => ((seed = (seed * 1664525 + 1013904223) >>> 0) / 4294967296);
@@ -14,6 +16,21 @@ for (const q of QUESTIONS) {
 }
 assert.equal(new Set(QUESTIONS.map((q) => q.id)).size, QUESTIONS.length, 'ids únicos');
 assert.equal(categoriesOf(QUESTIONS).length, 13);
+
+// perguntas com imagem do sinal
+assert.ok(SIGN_QUESTIONS.length >= 15, 'perguntas de sinais');
+for (const q of SIGN_QUESTIONS) {
+  assert.equal(q.c, SIGN_CATEGORY);
+  assert.equal(q.o.length, 4, `4 opções: ${q.img}`);
+  assert.equal(new Set(q.o).size, 4, `opções diferentes: ${q.img}`);
+  assert.ok(q.a >= 0 && q.a < 4 && q.e, `resposta e explicação: ${q.img}`);
+  assert.ok(q.id >= 10000, 'id fora do intervalo do banco base');
+  assert.ok(fs.existsSync(new URL(`../assets/sinais/${q.img}.png`, import.meta.url)), `PNG existe: ${q.img}`);
+  const src = fs.readFileSync(new URL('../src/signImages.js', import.meta.url), 'utf8');
+  assert.ok(src.includes(`'${q.img}'`), `mapa de imagens tem ${q.img}`);
+}
+assert.equal(new Set([...QUESTIONS, ...SIGN_QUESTIONS].map((q) => q.id)).size, QUESTIONS.length + SIGN_QUESTIONS.length, 'ids únicos no conjunto');
+assert.ok(new Set(SIGN_QUESTIONS.map((q) => q.a)).size >= 3, 'a resposta certa não está sempre na mesma posição');
 
 // shuffle não perde nem duplica elementos
 const arr = Array.from({ length: 50 }, (_, i) => i);

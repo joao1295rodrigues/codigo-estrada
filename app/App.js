@@ -4,13 +4,15 @@ import { StatusBar } from 'expo-status-bar';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 
-import QUESTIONS from './src/questions';
+import BASE_QUESTIONS from './src/questions';
+import { SIGN_QUESTIONS } from './src/signs';
 import { CONFIG } from './src/config';
 import { palettes } from './src/theme';
 import { answer, buildSession, categoriesOf, initialStore, results, shouldShowInterstitial } from './src/logic';
 import { initAds, prepareInterstitial, showAdPrivacyOptions, showInterstitialIfReady } from './src/ads';
 import { Home, Quiz, Result } from './src/screens';
 
+const QUESTIONS = [...BASE_QUESTIONS, ...SIGN_QUESTIONS];
 const CATEGORIES = categoriesOf(QUESTIONS);
 
 // Traduz o pedido do utilizador numa sessão de treino.
