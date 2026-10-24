@@ -135,7 +135,7 @@ export function Home({ colors, store, total, categories, wrongCount, examSize, o
 
       <Text style={s.foot}>
         Conteúdo informativo e de treino. Não substitui o manual oficial nem a legislação em vigor: confirma sempre no IMT (imt-ip.pt).
-        {'\n'}Sem registo. A app mostra anúncios (Google AdMob). O teu progresso fica guardado apenas neste dispositivo.
+        {'\n'}Imagens dos sinais: desenhos próprios e desenhos oficiais de domínio público (Wikimedia Commons).{'\n'}Sem registo. A app mostra anúncios (Google AdMob). O teu progresso fica guardado apenas neste dispositivo.
       </Text>
     </Shell>
   );

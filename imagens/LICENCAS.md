@@ -10,7 +10,13 @@
 ## Sinais com desenho mais complexo (ainda por fazer)
 Crianças (A14), curvas (A1a/b), passagem de peões (A16a), animais (A19a), trabalhos (A23), proibição de ultrapassar (C14a), virar à esquerda (C11b), inversão de marcha (C12), rotunda (D4), fim de todas as proibições (C20a), zona 30 (G4a), fim de localidade (N2) e marcas rodoviárias (M1, M2, M3, M8). Só desenhar quando o desenho exato estiver conferido na imagem oficial. **Não desenhar de memória.**
 
-## Imagens de terceiros (por descarregar, no computador local)
+## `terceiros/` – sinais oficiais portugueses (domínio público / CC0)
+- 25 SVG copiados por `scripts/importar-sinais-pt.py` do repositório CC0 https://github.com/skifahrer/traffic-signs, que reúne os ficheiros do Wikimedia Commons com a licença de cada um. A tabela completa (código, nome, licença, autor, link de origem) está em `imagens/terceiros/LICENCAS.md`.
+- Só se copiam ficheiros marcados nesses metadados como **Public domain** ou **CC0** (não exigem atribuição). Os 226 sinais em CC BY-SA ficaram de fora de propósito.
+- **Por confirmar por nós:** a licença vem dos metadados do repositório; convém abrir a página de origem de cada sinal antes de publicar.
+- A app usa PNG gerados destes SVG (`app/scripts/gerar-sinais-png.cjs`).
+
+## Outras imagens de terceiros (por descarregar, no computador local)
 - O ambiente na nuvem não consegue aceder ao Wikimedia Commons nem a bancos de imagens. Isto tem de ser feito localmente.
 - **Wikimedia Commons:** há desenhos dos sinais portugueses (ficheiros `Portugal road sign XX.svg`, por exemplo C3c, C3d, C3j, H4, H6-60, E1, E3, D7b, A1b, A14). A pesquisa indicou **CC BY-SA 4.0** em vários; alguns referem domínio público. **Verificar a licença na página de cada ficheiro.**
   - **CC BY-SA 4.0:** exige **atribuição** (autor, licença, link) e **partilha nas mesmas condições** para adaptações da imagem. Se usarmos, mostrar a atribuição (por exemplo, no "Sobre") e não alterar o desenho sem seguir a licença.

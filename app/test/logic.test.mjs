@@ -25,7 +25,7 @@ for (const q of SIGN_QUESTIONS) {
   assert.equal(new Set(q.o).size, 4, `opções diferentes: ${q.img}`);
   assert.ok(q.a >= 0 && q.a < 4 && q.e, `resposta e explicação: ${q.img}`);
   assert.ok(q.id >= 10000, 'id fora do intervalo do banco base');
-  assert.ok(fs.existsSync(new URL(`../assets/sinais/${q.img}.png`, import.meta.url)), `PNG existe: ${q.img}`);
+  assert.ok(fs.existsSync(new URL(`../assets/sinais/${q.img.replace('/', '-')}.png`, import.meta.url)), `PNG existe: ${q.img}`);
   const src = fs.readFileSync(new URL('../src/signImages.js', import.meta.url), 'utf8');
   assert.ok(src.includes(`'${q.img}'`), `mapa de imagens tem ${q.img}`);
 }
