@@ -205,6 +205,10 @@ write("privacidade.html", page({
     <h2>Publicidade</h2>
     <p>Este site pode apresentar anúncios do Google AdSense. O Google e os seus parceiros podem usar cookies e identificadores para mostrar anúncios, incluindo anúncios personalizados, e para medir o seu desempenho. Nos países do Espaço Económico Europeu, os anúncios personalizados só são apresentados com o teu consentimento, que podes dar ou retirar na mensagem de consentimento do site.</p>
     <p>Mais informação: <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">como o Google utiliza dados de sites parceiros</a> e <a href="https://adssettings.google.com" target="_blank" rel="noopener">definições de anúncios do Google</a>.</p>
+    <h2>App Android</h2>
+    <p>A app "Código da Estrada" não tem contas nem registo e não nos envia dados pessoais. O teu progresso (respostas, erros a rever) fica guardado apenas no teu telemóvel.</p>
+    <p>A app mostra anúncios do Google AdMob. Para isso, o Google Mobile Ads SDK pode recolher e usar identificadores do dispositivo (por exemplo, o identificador de publicidade), o endereço IP e dados sobre a utilização dos anúncios, para os mostrar, medir e prevenir fraude. Nos países do Espaço Económico Europeu, a app pede o teu consentimento ao abrir; podes alterá-lo mais tarde em "Preferências de anúncios", no fundo do ecrã inicial. Nas definições do Android podes repor ou eliminar o identificador de publicidade.</p>
+    <p>Mais informação: <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">como o Google usa dados em anúncios</a>.</p>
     <h2>Aviso</h2>
     <p>O conteúdo deste site é informativo e de treino. Pode conter erros ou estar desatualizado face à legislação. Não substitui o manual oficial nem o ensino numa escola de condução.</p>
     <p>Este projeto é independente e não tem qualquer ligação ao IMT, à ANSR ou a outras entidades oficiais. As perguntas e explicações são textos próprios, escritos com base na legislação; não são cópias de exames, manuais ou sites de terceiros.</p>

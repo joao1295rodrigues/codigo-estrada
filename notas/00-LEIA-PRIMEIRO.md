@@ -23,6 +23,7 @@ Objetivo do dono do projeto: oferecer a app e o site **de graça** às pessoas, 
 | `07-passos-gerais-site-e-adsense.md` | Passos antigos para site e AdSense |
 | `08-revisao-da-sinalizacao.md` | Revisão detalhada das perguntas de sinalização |
 | `09-legalidade.md` | Plágio, direitos de autor, imagens, RGPD, licenças e pendentes |
+| `10-publicacao-em-lojas.md` | Preparação para publicar numa loja: ordem, regras, textos prontos, materiais |
 
 ## Preferências do dono do projeto (importante para quem o ajudar)
 - Português de Portugal. Passos **simples, um de cada vez**, com os nomes **exatamente como aparecem no ecrã** dele (por exemplo "Faixa" e "Intercalar" no AdMob, e não "banner"/"intersticial").
