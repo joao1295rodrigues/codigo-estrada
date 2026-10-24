@@ -1,0 +1,2 @@
+  mCurrentFocus=Window{be36305 u0 codigo.da.estrada.R/codigo.da.estrada.R.MainActivity}
+  mFocusedApp=ActivityRecord{111269479 u0 codigo.da.estrada.R/.MainActivity t7}

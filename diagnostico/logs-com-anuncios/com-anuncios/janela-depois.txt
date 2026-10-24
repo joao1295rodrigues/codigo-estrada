@@ -1,0 +1,1 @@
+  mCurrentFocus=Window{415d732 u0 codigo.da.estrada.R/codigo.da.estrada.R.MainActivity}

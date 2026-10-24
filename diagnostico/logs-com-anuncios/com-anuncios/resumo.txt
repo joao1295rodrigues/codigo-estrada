@@ -1,0 +1,72 @@
+102:10-24 10:03:42.321  1276  1312 E FileLog : Caused by: android.system.ErrnoException: open failed: ENOENT (No such file or directory)
+1273:10-24 10:03:44.823  1276  1312 E FileLog : Caused by: android.system.ErrnoException: open failed: ENOENT (No such file or directory)
+1975:10-24 10:03:47.208  1460  2022 W DataFileManager: Caused by: android.system.ErrnoException: open failed: ENOENT (No such file or directory)
+4738:10-24 10:03:54.149  1713  2341 E GmsCoreLogger: Caused by: java.util.concurrent.TimeoutException
+6174:10-24 10:03:56.142  1705  2309 E MendelPackageState: Caused by: java.io.IOException: file:///data/user/0/com.google.android.googlequicksearchbox/files/phenotype/com.google.android.libraries.search.assistant.invocation.device%23com.google.android.googlequicksearchbox.tmp could not be renamed to file:///data/user/0/com.google.android.googlequicksearchbox/files/phenotype/com.google.android.libraries.search.assistant.invocation.device%23com.google.android.googlequicksearchbox
+6213:10-24 10:03:56.174  1584  2245 E MendelPackageState: Caused by: java.io.IOException: file:///data/user/0/com.google.android.googlequicksearchbox/files/phenotype/com.google.android.apps.search.assistant.device%23com.google.android.googlequicksearchbox.tmp could not be renamed to file:///data/user/0/com.google.android.googlequicksearchbox/files/phenotype/com.google.android.apps.search.assistant.device%23com.google.android.googlequicksearchbox
+6248:10-24 10:03:56.185  1705  2422 E fbby    : Caused by: java.io.IOException: file:///data/user/0/com.google.android.googlequicksearchbox/files/phenotype/googledata.experiments.mobile.assistant.client_packages.component.soda_hotword.device%23com.google.android.googlequicksearchbox.tmp could not be renamed to file:///data/user/0/com.google.android.googlequicksearchbox/files/phenotype/googledata.experiments.mobile.assistant.client_packages.component.soda_hotword.device%23com.google.android.googlequicksearchbox
+7364:10-24 10:03:57.280  1705  2188 E MendelPackageState: Caused by: java.io.IOException: file:///data/user/0/com.google.android.googlequicksearchbox/files/phenotype/com.google.android.libraries.search.device%23com.google.android.googlequicksearchbox.tmp could not be renamed to file:///data/user/0/com.google.android.googlequicksearchbox/files/phenotype/com.google.android.libraries.search.device%23com.google.android.googlequicksearchbox
+8459:10-24 10:03:57.654  1030  2610 E BackupHelper: Caused by: android.system.ErrnoException: open failed: ENOENT (No such file or directory)
+8938:10-24 10:03:58.169  2631  2631 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+8940:10-24 10:03:58.173  2631  2631 I AndroidRuntime: Using default boot image
+8941:10-24 10:03:58.173  2631  2631 I AndroidRuntime: Leaving lock profiling enabled
+9116:10-24 10:03:58.459  2631  2631 D AndroidRuntime: Calling main entry com.android.commands.monkey.Monkey
+9792:10-24 10:03:59.529  2631  2631 I AndroidRuntime: VM exiting with result code 0.
+10611:10-24 10:04:01.397  1358  2357 I GmsActivityDetector: Caused by: android.system.ErrnoException: open failed: ENOENT (No such file or directory)
+11369:10-24 10:04:02.554  2715  2800 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class io.invertase.googlemobileads.ReactNativeGoogleMobileAdsMediaViewManager
+11376:10-24 10:04:02.558  2715  2800 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class io.invertase.googlemobileads.ReactNativeGoogleMobileAdsBannerAdViewManager
+11387:10-24 10:04:02.561  2715  2800 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class io.invertase.googlemobileads.ReactNativeGoogleMobileAdsNativeAdViewManager
+11388:10-24 10:04:02.561  2715  2800 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class io.invertase.googlemobileads.ReactNativeGoogleMobileAdsMultiFormatBannerViewManager
+11426:10-24 10:04:02.606  2715  2800 I ReactNativeJS: Running "main"
+13079:10-24 10:04:05.490  1705  1705 E rdv     : Caused by: afvx: errorCode: 65586, engine: 2
+13082:10-24 10:04:05.490  1705  1705 E rdv     : Caused by: afvt: errorCode: 401, engine: 2
+14499:10-24 10:04:08.234  2482  3122 E PackagePolicyHandler: Caused by: android.os.RemoteException: Remote stack trace:
+14632:10-24 10:04:08.284   655  1256 E DeviceLockServiceImpl: Caused by: java.lang.IllegalStateException: Failed to enforce policies for provision state 0 and device state 0
+14868:10-24 10:04:08.869  1358  2333 W FontLog : Caused by: java.lang.Exception: SQLiteConnectionPool.close()
+15488:10-24 10:04:09.948  2715  3193 W go.da.estrada.R: Long monitor contention with owner gads-30 (3213) at void com.google.android.gms.internal.ads.zzbdf.zza()(com.google.android.gms:play-services-ads@@25.5.0:29) waiters=0 in void com.google.android.gms.internal.ads.zzbdf.zza() for 1.148s
+17606:10-24 10:04:14.166  1358  2411 I NearbyMediums: Caused by: android.os.RemoteException: Remote stack trace:
+18401:10-24 10:04:15.589  1713  2741 E GoogleSettingsUtils: Caused by: android.system.ErrnoException: open failed: ENOENT (No such file or directory)
+24862:10-24 10:04:24.953  1358  3855 I SemanticLocation: Caused by: android.system.ErrnoException: open failed: ENOENT (No such file or directory)
+24907:10-24 10:04:24.960  1358  3855 I SemanticLocation: Caused by: android.system.ErrnoException: open failed: ENOENT (No such file or directory)
+26870:10-24 10:04:26.957  1705  1705 E rdv     : Caused by: afvx: errorCode: 65586, engine: 2
+26873:10-24 10:04:26.957  1705  1705 E rdv     : Caused by: afvt: errorCode: 401, engine: 2
+27294:10-24 10:04:27.742  3938  3959 W Safetyhub.EmergencySearchIndexablesProvider: Caused by: java.lang.IllegalStateException: No account, cannot provide search indexables
+27348:10-24 10:04:27.764  3938  3960 W Safetyhub.EmergencySearchIndexablesProvider: Caused by: java.lang.IllegalStateException: No account, cannot provide search indexables
+27428:10-24 10:04:27.812  1713  3282 E FirstPartyBroadcaster: Caused by: android.content.pm.PackageManager$NameNotFoundException
+33827:10-24 10:04:30.239  1358  1368 W GLSUser : Caused by: cilv: Parse Proto Exception with response code 400
+33840:10-24 10:04:30.239  1358  1368 W GLSUser : Caused by: gztt: Protocol message contained an invalid tag (zero).
+33949:10-24 10:04:30.340  1713  3777 W PeoplePU: Caused by: android.os.RemoteException: Remote stack trace:
+34955:10-24 10:04:31.233  1263  1279 W SliceDataConverter: Caused by: java.lang.reflect.InvocationTargetException
+34960:10-24 10:04:31.233  1263  1279 W SliceDataConverter: Caused by: java.lang.RuntimeException: Can't create handler inside thread Thread[binder:1263_3,5,main] that has not called Looper.prepare()
+34988:10-24 10:04:31.236  1263  1279 W SliceDataConverter: Caused by: java.lang.reflect.InvocationTargetException
+34993:10-24 10:04:31.236  1263  1279 W SliceDataConverter: Caused by: java.lang.RuntimeException: Can't create handler inside thread Thread[binder:1263_3,5,main] that has not called Looper.prepare()
+35041:10-24 10:04:31.272  1263  1279 W SliceDataConverter: Caused by: java.lang.NoSuchMethodException: com.android.settings.fuelgauge.batteryusage.BatteryChartPreferenceController.<init> [class android.content.Context, class java.lang.String]
+35125:10-24 10:04:31.287  1263  1279 W SliceDataConverter: Caused by: java.lang.reflect.InvocationTargetException
+35130:10-24 10:04:31.287  1263  1279 W SliceDataConverter: Caused by: java.lang.RuntimeException: Can't create handler inside thread Thread[binder:1263_3,5,main] that has not called Looper.prepare()
+35173:10-24 10:04:31.294  1263  1279 W SliceDataConverter: Caused by: java.lang.reflect.InvocationTargetException
+35178:10-24 10:04:31.294  1263  1279 W SliceDataConverter: Caused by: java.lang.RuntimeException: Can't create handler inside thread Thread[binder:1263_3,5,main] that has not called Looper.prepare()
+35324:10-24 10:04:31.425  1263  1279 W SliceDataConverter: Caused by: java.lang.NoSuchMethodException: com.android.settings.development.linuxterminal.EnableLinuxTerminalPreferenceController.<init> [class android.content.Context, class java.lang.String]
+35477:10-24 10:04:31.468  1263  1279 W SliceDataConverter: Caused by: java.lang.reflect.InvocationTargetException
+35482:10-24 10:04:31.468  1263  1279 W SliceDataConverter: Caused by: java.lang.RuntimeException: Can't create handler inside thread Thread[binder:1263_3,5,main] that has not called Looper.prepare()
+35881:10-24 10:04:31.853  3912  4152 W FlagRegistrar: Caused by: axxl: 17: API: Phenotype.API is not available on this device. Connection failed with: ConnectionResult{statusCode=DEVELOPER_ERROR, resolution=null, message=null}
+35968:10-24 10:04:31.900  1358  4069 I SemanticLocation: Caused by: android.system.ErrnoException: open failed: ENOENT (No such file or directory)
+36003:10-24 10:04:31.900  1358  4069 I SemanticLocation: Caused by: android.system.ErrnoException: open failed: ENOENT (No such file or directory)
+36275:10-24 10:04:32.218  1358  4069 I SemanticLocation: Caused by: android.system.ErrnoException: open failed: ENOENT (No such file or directory)
+36813:10-24 10:04:32.792  3912  4055 W BugleRcs: Caused by: java.lang.IllegalStateException: JibeService Not Initialized
+36907:10-24 10:04:32.864  3912  4057 W BugleRcs: Caused by: java.lang.IllegalStateException: JibeService Not Initialized
+38502:10-24 10:04:34.776  1713  3747 E GoogleSettingsUtils: Caused by: android.system.ErrnoException: open failed: ENOENT (No such file or directory)
+40561:10-24 10:04:37.596  1705  2891 E fbby    : Caused by: java.io.IOException: file:///data/user/0/com.google.android.googlequicksearchbox/files/phenotype/com.google.android.apps.search.policy%23com.google.android.googlequicksearchbox.tmp could not be renamed to file:///data/user/0/com.google.android.googlequicksearchbox/files/phenotype/com.google.android.apps.search.policy%23com.google.android.googlequicksearchbox
+40671:10-24 10:04:37.693  1713  4173 E GoogleSettingsUtils: Caused by: android.system.ErrnoException: open failed: ENOENT (No such file or directory)
+41310:10-24 10:04:39.261  1713  4173 E GoogleSettingsUtils: Caused by: android.system.ErrnoException: open failed: ENOENT (No such file or directory)
+42541:10-24 10:04:40.434  1713  4169 W PeoplePU: Caused by: android.os.RemoteException: Remote stack trace:
+44449:10-24 10:04:42.076  1705  1705 E rdv     : Caused by: afvx: errorCode: 65586, engine: 2
+44452:10-24 10:04:42.076  1705  1705 E rdv     : Caused by: afvt: errorCode: 401, engine: 2
+45924:10-24 10:04:44.270  1577  1814 E AmbientMusicServiceMana: Caused by: java.lang.reflect.InvocationTargetException
+45928:10-24 10:04:44.270  1577  1814 E AmbientMusicServiceMana: Caused by: java.lang.IllegalStateException: No underlying SoundTriggerModule available
+48161:10-24 10:04:51.767  4570  4570 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+48162:10-24 10:04:51.794  4570  4570 I AndroidRuntime: Using default boot image
+48163:10-24 10:04:51.794  4570  4570 I AndroidRuntime: Leaving lock profiling enabled
+48206:10-24 10:04:52.453  4570  4570 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+48515:10-24 10:04:53.169  1358  2661 W GLSUser : Caused by: cilv: Parse Proto Exception with response code 400
+48528:10-24 10:04:53.169  1358  2661 W GLSUser : Caused by: gztt: Protocol message contained an invalid tag (zero).
+48834:10-24 10:04:54.222  4570  4570 D AndroidRuntime: Shutting down VM

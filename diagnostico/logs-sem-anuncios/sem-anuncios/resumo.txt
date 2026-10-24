@@ -1,0 +1,75 @@
+16:10-24 10:05:01.533  1598  1758 W MobStoreFlagStore: Caused by: iwt: 17: 17: API: Phenotype.API is not available on this device. Connection failed with: hbv{statusCode=API_UNAVAILABLE, resolution=null, message=null}
+46:10-24 10:05:01.533  1598  1758 W MobStoreFlagStore: Caused by: hdc: 17: API: Phenotype.API is not available on this device. Connection failed with: hbv{statusCode=API_UNAVAILABLE, resolution=null, message=null}
+82:10-24 10:05:01.537  1598  1769 E lqx     : Caused by: hdc: 17: API: Phenotype.API is not available on this device. Connection failed with: hbv{statusCode=API_UNAVAILABLE, resolution=null, message=null}
+113:10-24 10:05:01.537  1598  1769 E MendelPackageState: Caused by: hdc: 17: API: Phenotype.API is not available on this device. Connection failed with: hbv{statusCode=API_UNAVAILABLE, resolution=null, message=null}
+133:10-24 10:05:01.541  1598  1758 W MobStoreFlagStore: Caused by: iwt: 17: 17: API: Phenotype.API is not available on this device. Connection failed with: hbv{statusCode=API_UNAVAILABLE, resolution=null, message=null}
+163:10-24 10:05:01.541  1598  1758 W MobStoreFlagStore: Caused by: hdc: 17: API: Phenotype.API is not available on this device. Connection failed with: hbv{statusCode=API_UNAVAILABLE, resolution=null, message=null}
+199:10-24 10:05:01.541  1598  1769 E lqx     : Caused by: hdc: 17: API: Phenotype.API is not available on this device. Connection failed with: hbv{statusCode=API_UNAVAILABLE, resolution=null, message=null}
+235:10-24 10:05:01.541  1598  1769 E lqx     : Caused by: hdc: 17: API: Phenotype.API is not available on this device. Connection failed with: hbv{statusCode=API_UNAVAILABLE, resolution=null, message=null}
+271:10-24 10:05:01.541  1598  1769 E lqx     : Caused by: hdc: 17: API: Phenotype.API is not available on this device. Connection failed with: hbv{statusCode=API_UNAVAILABLE, resolution=null, message=null}
+302:10-24 10:05:01.542  1598  1769 E AndroidFutures: Caused by: hdc: 17: API: Phenotype.API is not available on this device. Connection failed with: hbv{statusCode=API_UNAVAILABLE, resolution=null, message=null}
+341:10-24 10:05:01.545  1598  1772 E lqx     : Caused by: hdc: 17: API: Phenotype.API is not available on this device. Connection failed with: hbv{statusCode=API_UNAVAILABLE, resolution=null, message=null}
+372:10-24 10:05:01.550  1598  1772 E AndroidFutures: Caused by: hdc: 17: API: Phenotype.API is not available on this device. Connection failed with: hbv{statusCode=API_UNAVAILABLE, resolution=null, message=null}
+4102:10-24 10:05:09.338  1532  1983 W DataFileManager: Caused by: android.system.ErrnoException: open failed: ENOENT (No such file or directory)
+4361:10-24 10:05:10.041  1301  1367 E FileLog : Caused by: android.system.ErrnoException: open failed: ENOENT (No such file or directory)
+4893:10-24 10:05:11.479  1598  1759 E lqx     : Caused by: hdc: 17: API: Phenotype.API is not available on this device. Connection failed with: hbv{statusCode=API_UNAVAILABLE, resolution=null, message=null}
+4914:10-24 10:05:11.498  1015  2228 E BackupHelper: Caused by: android.system.ErrnoException: open failed: ENOENT (No such file or directory)
+5058:10-24 10:05:11.924  1598  1759 E AndroidFutures: Caused by: hdc: 17: API: Phenotype.API is not available on this device. Connection failed with: hbv{statusCode=API_UNAVAILABLE, resolution=null, message=null}
+5089:10-24 10:05:11.929  1598  1759 E AndroidFutures: Caused by: hdc: 17: API: Phenotype.API is not available on this device. Connection failed with: hbv{statusCode=API_UNAVAILABLE, resolution=null, message=null}
+5150:10-24 10:05:12.162  2239  2239 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+5153:10-24 10:05:12.172  2239  2239 I AndroidRuntime: Using default boot image
+5154:10-24 10:05:12.172  2239  2239 I AndroidRuntime: Leaving lock profiling enabled
+5208:10-24 10:05:12.616  2239  2239 D AndroidRuntime: Calling main entry com.android.commands.monkey.Monkey
+5516:10-24 10:05:13.016  2239  2239 I AndroidRuntime: VM exiting with result code 0.
+5866:10-24 10:05:13.497  1344  1962 I GmsActivityDetector: Caused by: android.system.ErrnoException: open failed: ENOENT (No such file or directory)
+6400:10-24 10:05:14.687  2299  2361 I ReactNativeJS: Running "main"
+12576:10-24 10:05:22.622  1698  2779 E PackagePolicyHandler: Caused by: android.os.RemoteException: Remote stack trace:
+12640:10-24 10:05:22.646   644  1232 E DeviceLockServiceImpl: Caused by: java.lang.IllegalStateException: Failed to enforce policies for provision state 0 and device state 0
+13098:10-24 10:05:23.749  1598  1615 E lqx     : Caused by: hdc: 29503: 
+13502:10-24 10:05:24.521  2745  2831 I VoiceDataManager: Caused by: java.util.concurrent.CancellationException: Task was cancelled.
+13517:10-24 10:05:24.521  2745  2831 I VoiceDataManager: Caused by: java.util.concurrent.CancellationException: Task was cancelled.
+14224:10-24 10:05:26.251  1344  1662 I SemanticLocation: Caused by: android.system.ErrnoException: open failed: ENOENT (No such file or directory)
+14308:10-24 10:05:26.414  1344  1662 I SemanticLocation: Caused by: android.system.ErrnoException: open failed: ENOENT (No such file or directory)
+15940:10-24 10:05:28.720  1344  2649 I NearbyMediums: Caused by: android.os.RemoteException: Remote stack trace:
+18569:10-24 10:05:32.018  2082  2326 W axpp    : Caused by: java.lang.IllegalArgumentException
+18618:10-24 10:05:32.037  2082  2378 W axtd    : Caused by: gaty: UNKNOWN: java.lang.IllegalArgumentException: null
+20116:10-24 10:05:33.954  1807  2198 W ehca    : Caused by: java.lang.IllegalArgumentException
+20183:10-24 10:05:33.998  1807  2198 E ehbx    : Caused by: java.lang.IllegalArgumentException
+20246:10-24 10:05:34.021  1807  2371 E bhxn    : Caused by: java.lang.IllegalArgumentException
+20435:10-24 10:05:34.141  2082  2378 E engy    : Caused by: java.lang.IllegalArgumentException
+21956:10-24 10:05:36.233  1492  2787 E GoogleSettingsUtils: Caused by: android.system.ErrnoException: open failed: EACCES (Permission denied)
+25680:10-24 10:05:40.483  3512  3545 W Safetyhub.EmergencySearchIndexablesProvider: Caused by: java.lang.IllegalStateException: No account, cannot provide search indexables
+25752:10-24 10:05:40.562  3512  3545 W Safetyhub.EmergencySearchIndexablesProvider: Caused by: java.lang.IllegalStateException: No account, cannot provide search indexables
+33095:10-24 10:05:44.925  3501  3785 W FlagRegistrar: Caused by: axxl: 17: API: Phenotype.API is not available on this device. Connection failed with: ConnectionResult{statusCode=DEVELOPER_ERROR, resolution=null, message=null}
+33257:10-24 10:05:45.312  1344  1592 I SemanticLocation: Caused by: android.system.ErrnoException: open failed: ENOENT (No such file or directory)
+33291:10-24 10:05:45.312  1344  1592 I SemanticLocation: Caused by: android.system.ErrnoException: open failed: ENOENT (No such file or directory)
+33398:10-24 10:05:45.513  1492  3157 E FirstPartyBroadcaster: Caused by: android.content.pm.PackageManager$NameNotFoundException
+33638:10-24 10:05:45.811  3501  3625 W BugleRcs: Caused by: java.lang.IllegalStateException: JibeService Not Initialized
+33679:10-24 10:05:45.864  3501  3605 W BugleRcs: Caused by: java.lang.IllegalStateException: JibeService Not Initialized
+33838:10-24 10:05:46.063  1344  1592 I SemanticLocation: Caused by: android.system.ErrnoException: open failed: ENOENT (No such file or directory)
+34089:10-24 10:05:46.389  1492  3016 E GoogleSettingsUtils: Caused by: android.system.ErrnoException: open failed: EACCES (Permission denied)
+34784:10-24 10:05:47.484  1344  2305 W GLSUser : Caused by: cilv: Parse Proto Exception with response code 400
+34797:10-24 10:05:47.484  1344  2305 W GLSUser : Caused by: gztt: Protocol message contained an invalid tag (zero).
+35140:10-24 10:05:48.798  1492  3710 E GoogleSettingsUtils: Caused by: android.system.ErrnoException: open failed: EACCES (Permission denied)
+36487:10-24 10:05:51.900  1282  1482 W SliceDataConverter: Caused by: java.lang.reflect.InvocationTargetException
+36492:10-24 10:05:51.900  1282  1482 W SliceDataConverter: Caused by: java.lang.RuntimeException: Can't create handler inside thread Thread[binder:1282_3,5,main] that has not called Looper.prepare()
+36527:10-24 10:05:51.918  1282  1482 W SliceDataConverter: Caused by: java.lang.reflect.InvocationTargetException
+36532:10-24 10:05:51.918  1282  1482 W SliceDataConverter: Caused by: java.lang.RuntimeException: Can't create handler inside thread Thread[binder:1282_3,5,main] that has not called Looper.prepare()
+36712:10-24 10:05:52.210  1282  1482 W SliceDataConverter: Caused by: java.lang.NoSuchMethodException: com.android.settings.fuelgauge.batteryusage.BatteryChartPreferenceController.<init> [class android.content.Context, class java.lang.String]
+36747:10-24 10:05:52.229  1282  1482 W SliceDataConverter: Caused by: java.lang.reflect.InvocationTargetException
+36752:10-24 10:05:52.229  1282  1482 W SliceDataConverter: Caused by: java.lang.RuntimeException: Can't create handler inside thread Thread[binder:1282_3,5,main] that has not called Looper.prepare()
+36787:10-24 10:05:52.258  1282  1482 W SliceDataConverter: Caused by: java.lang.reflect.InvocationTargetException
+36792:10-24 10:05:52.258  1282  1482 W SliceDataConverter: Caused by: java.lang.RuntimeException: Can't create handler inside thread Thread[binder:1282_3,5,main] that has not called Looper.prepare()
+36819:10-24 10:05:52.259  1282  1482 W SliceDataConverter: Caused by: java.lang.reflect.InvocationTargetException
+36824:10-24 10:05:52.259  1282  1482 W SliceDataConverter: Caused by: java.lang.RuntimeException: Can't create handler inside thread Thread[binder:1282_3,5,main] that has not called Looper.prepare()
+36895:10-24 10:05:52.294  1282  1482 W SliceDataConverter: Caused by: java.lang.NoSuchMethodException: com.android.settings.development.linuxterminal.EnableLinuxTerminalPreferenceController.<init> [class android.content.Context, class java.lang.String]
+38076:10-24 10:05:54.245  1492  3933 W PeoplePU: Caused by: android.os.RemoteException: Remote stack trace:
+41313:10-24 10:05:58.111  2082  2082 E rdv     : Caused by: afvx: errorCode: 65586, engine: 2
+41316:10-24 10:05:58.111  2082  2082 E rdv     : Caused by: afvt: errorCode: 401, engine: 2
+42283:10-24 10:05:59.700  1492  3943 E GoogleSettingsUtils: Caused by: android.system.ErrnoException: open failed: EACCES (Permission denied)
+43718:10-24 10:06:03.619  4159  4159 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+43722:10-24 10:06:03.634  4159  4159 I AndroidRuntime: Using default boot image
+43723:10-24 10:06:03.634  4159  4159 I AndroidRuntime: Leaving lock profiling enabled
+43838:10-24 10:06:03.988  4159  4159 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+44406:10-24 10:06:05.177  4159  4159 D AndroidRuntime: Shutting down VM
+44732:10-24 10:06:05.593  1492  3017 W PeoplePU: Caused by: android.os.RemoteException: Remote stack trace:

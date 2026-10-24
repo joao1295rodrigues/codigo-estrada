@@ -1,0 +1,17 @@
+== Android ==
+16
+36
+x86_64
+== Google Play Services ==
+    versionName=25.26.35 (260800-783060121)
+== WebView ==
+Current WebView Update Service state
+  Current WebView package (name, version): (com.google.android.webview, 133.0.6943.137)
+  Minimum targetSdkVersion: 33
+  Minimum WebView version code: 694313738
+  Number of relros started: 1
+  Number of relros finished: 1
+  WebView package dirty: false
+  Any WebView package installed: true
+  Preferred WebView package (name, version): (com.google.android.webview, 133.0.6943.137)
+  WebView packages:
