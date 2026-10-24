@@ -50,7 +50,7 @@
 
 ## Melhorias da app (2026-10-24)
 - **18 perguntas novas com a imagem do sinal** ("Qual é o significado deste sinal?"), categoria "Sinais (imagem)", só na app (não estão em `questions.js`, portanto não vão para o site). Código: `app/src/signs.js` (perguntas), `app/src/signImages.js` (imagens), `app/assets/sinais/*.png` (gerados de `imagens/sinais/*.svg` por `app/scripts/gerar-sinais-png.cjs`). A imagem aparece no teste e na revisão de erros. Ids a partir de 10000.
-- Testado: `npm test` passa e `npm run bundle` compila. **Não testado ainda num telemóvel/emulador** (a compilação do APK no GitHub Actions e o teste no emulador vêm a seguir).
+- Testado: `npm test` passa, `npm run bundle` compila, o APK compilou no GitHub Actions (run 40081444869, commit 64d85fa) e **no emulador Android 16 (versão com anúncios) a app abre, a categoria "Sinais (imagem)" mostra o sinal e as 4 opções, sem erros nem fecho** (capturas no ramo `diag-logs`, pasta `diagnostico/`). **Ainda não testado no telemóvel do dono.**
 - Os desenhos são nossos (CC0 proposto), sem imagens de terceiros. Imagens de licença pública de terceiros (fotos, sinais complexos) só podem ser descarregadas no computador do dono (ver `imagens/LICENCAS.md`).
 
 ## Autoria (2026-10-22)
