@@ -1,11 +1,18 @@
 # Ponto de situação
 
-**Última atualização: 2026-10-24 (noite).** (Atualizar a data e o resumo a cada alteração.)
+**Última atualização: 2026-10-30.** (Atualizar a data e o resumo a cada alteração.)
 
 ## Estado em resumo
 - **Site no ar** e a funcionar: https://joao1295rodrigues.github.io/codigo-estrada/ (28 páginas: app de treino, 13 páginas de perguntas por categoria, 10 guias, Sobre, Privacidade). **Sem anúncios** (o AdSense ainda não foi pedido).
 - **App Android** (Expo/React Native) a funcionar no telemóvel do dono (Motorola Edge 60, Android 16): abre bem, o simulacro funciona. Tem **anúncios AdMob configurados com IDs reais**, mas **ainda não aparecem anúncios** (a app está em revisão no AdMob desde 2026-10-21; revisão de 2 a 3 dias).
 - **Banco de perguntas:** 303 perguntas, 13 categorias, verificadas por fontes secundárias (ver `06`).
+
+## Atualização 2026-10-30
+- **AdMob:** conta aprovada pela Google, mas a app fica "requer revisão" porque não está numa loja suportada (sem loja, anúncios limitados).
+- **OPPO:** formulário de programador (particular, ID + cartão) submetido, estado "In review". Sem prazo oficial; estimativa de terceiros 1-3 dias úteis para a conta + 3-5 para a app (não confirmado). Se passarem 10 dias úteis sem resposta, escrever ao apoio da OPPO.
+- **VIVO descartada:** o FAQ oficial (segundo resumo de pesquisa, página não aberta aqui) diz que não aceita programadores particulares; empresas de fora da China precisam de registo comercial. Contacto oficial citado: globaldev@vivo.com (não confirmado).
+- **Lojas restantes:** só OPPO (em análise) e Google Play (25 USD + teste fechado 12 testers/14 dias, só se a OPPO falhar e os anúncios compensarem). Amazon, Xiaomi, Samsung e VIVO não servem a particulares.
+- **Por fazer:** chave de assinatura própria (aguarda "faz a chave"); decisão sobre sinais CC BY-SA.
 
 ## Versão atual da app (APK)
 - Pacote Android: `codigo.da.estrada.R` (igual ao ligado no AdMob). Versão 1.0.0.
