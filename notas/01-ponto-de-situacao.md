@@ -1,10 +1,10 @@
 # Ponto de situação
 
-**Última atualização: 2026-10-30 (email enviado à OPPO).** (Atualizar a data e o resumo a cada alteração.)
+**Última atualização: 2026-11-02.** O resumo completo e mais recente está em `00-LEIA-PRIMEIRO.md` (secção "RETOMAR AQUI"). (Atualizar a data e o resumo a cada alteração.)
 
 ## Estado em resumo
 - **Site no ar** e a funcionar: https://joao1295rodrigues.github.io/codigo-estrada/ (28 páginas: app de treino, 13 páginas de perguntas por categoria, 10 guias, Sobre, Privacidade). **Sem anúncios** (o AdSense ainda não foi pedido).
-- **App Android** (Expo/React Native) a funcionar no telemóvel do dono (Motorola Edge 60, Android 16): abre bem, o simulacro funciona. Tem **anúncios AdMob configurados com IDs reais**, mas **ainda não aparecem anúncios** (a app está em revisão no AdMob desde 2026-10-21; revisão de 2 a 3 dias).
+- **App Android** (Expo/React Native) a funcionar no telemóvel do dono (Motorola Edge 60, Android 16): abre bem, o simulacro funciona. Tem **anúncios AdMob configurados com IDs reais**, mas **ainda não aparecem anúncios reais**: a app fica "requer revisão" no AdMob até estar numa loja suportada (ver "Atualização 2026-10-30" abaixo).
 - **Banco de perguntas:** 303 perguntas, 13 categorias, verificadas por fontes secundárias (ver `06`).
 
 ## Atualização 2026-10-30

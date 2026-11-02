@@ -1,7 +1,7 @@
 # CLAUDE.md: Código da Estrada
 
 Projeto gratuito de treino para o exame de código da estrada (Portugal): site (GitHub Pages) + app Android (Expo/React Native, AdMob).
-**Ler primeiro `notas/00-LEIA-PRIMEIRO.md` e `notas/01-ponto-de-situacao.md`.**
+**Ler primeiro `notas/00-LEIA-PRIMEIRO.md` (secção "RETOMAR AQUI", tem o resumo completo) e depois `notas/01-ponto-de-situacao.md`.**
 
 ## Regras para trabalhar aqui
 - Responder em **português de Portugal**, passos simples, um de cada vez, com os nomes como aparecem no ecrã do dono (AdMob: "Faixa", "Intercalar").
