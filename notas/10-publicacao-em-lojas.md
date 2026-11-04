@@ -42,3 +42,21 @@ Estado em 2026-10-24. Objetivo do dono: publicar numa loja suportada pelo AdMob 
 - Mudar o nome na app para incluir "(não oficial)"? (altera `app/app.json` e recompila o APK; juntar com outras melhorias).
 - Definir a chave de assinatura própria (ver acima).
 - Se for a Google Play: gerar um AAB (não APK) com API alvo 36.
+
+## OPPO: textos prontos para o apoio (2026-11-04)
+Endereço do apoio de programadores (visto no rodapé do portal): `devservice@oppo.com`. Enviar do email da conta OPPO, sem anexar documentos nem números. Assinar com o nome completo do dono (não escrever o nome nem o email nestas notas, o repositório é público).
+
+**Pergunta sobre a rejeição (enviar em resposta ao email de apoio ou por "customer service" no portal):**
+> Hello,
+> My developer account application was rejected with this reason: "Bank card information is missing in the Qualification information".
+> I uploaded a photo of my bank card, but my name is printed on the back, not on the front. Could you please tell me exactly what information is missing, and whether I should upload the front and the back of the card in one image?
+> I will resubmit as soon as I know what is needed. Thank you for your help.
+> Best regards, [NOME COMPLETO]
+
+**Pedido de estado (já enviado em 2026-10-30; foi o que originou a resposta automática de 2026-11-03):** pedido educado de estado e prazo, particular de Portugal, app grátis de treino de código da estrada, primeiro projeto. Decisão: **não** prometer percentagem de lucros (parece suborno e cria compromissos).
+
+**Fotos para o formulário (regras que decidimos):**
+1. Cartão direito, inteiro, sem reflexos e sem flash, em superfície lisa (folha branca).
+2. Cartão bancário: número visível com os dígitos do meio tapados (ficam os primeiros 6 e os últimos 4), validade e nome visíveis. Se o nome estiver atrás, frente e verso numa só imagem. Tapar só o CVV. Cartão físico original, não o virtual da app.
+3. Documento de identificação: direito, inteiro, sem reflexos.
+4. JPG ou PNG, menos de 5 MB cada. Mostrar uma captura a quem ajuda antes de submeter.

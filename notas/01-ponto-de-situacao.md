@@ -8,7 +8,7 @@
 - **Banco de perguntas:** 303 perguntas, 13 categorias, verificadas por fontes secundárias (ver `06`).
 
 ## Atualização 2026-11-04
-- **OPPO rejeitou o pedido** por falta de informação do cartão bancário (foto sem número/validade/nome). Detalhes e passos em `00-LEIA-PRIMEIRO.md`, secção "RETOMAR AQUI", ponto 2.3. Nada mais falta para além de refazer as fotos e voltar a submeter.
+- **OPPO rejeitou o pedido** por falta de informação do cartão bancário (foto sem número/validade/nome). Detalhes e passos em `00-LEIA-PRIMEIRO.md`, secção "RETOMAR AQUI", ponto 2.3. Nada mais falta para além de refazer as fotos e voltar a submeter. Textos prontos para o apoio da OPPO em `10-publicacao-em-lojas.md`.
 
 ## Atualização 2026-10-30
 - **AdMob:** conta aprovada pela Google, mas a app fica "requer revisão" porque não está numa loja suportada (sem loja, anúncios limitados).
