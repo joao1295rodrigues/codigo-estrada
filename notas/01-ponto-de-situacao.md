@@ -1,11 +1,14 @@
 # Ponto de situação
 
-**Última atualização: 2026-11-02.** O resumo completo e mais recente está em `00-LEIA-PRIMEIRO.md` (secção "RETOMAR AQUI"). (Atualizar a data e o resumo a cada alteração.)
+**Última atualização: 2026-11-04.** O resumo completo e mais recente está em `00-LEIA-PRIMEIRO.md` (secção "RETOMAR AQUI"). (Atualizar a data e o resumo a cada alteração.)
 
 ## Estado em resumo
 - **Site no ar** e a funcionar: https://joao1295rodrigues.github.io/codigo-estrada/ (28 páginas: app de treino, 13 páginas de perguntas por categoria, 10 guias, Sobre, Privacidade). **Sem anúncios** (o AdSense ainda não foi pedido).
 - **App Android** (Expo/React Native) a funcionar no telemóvel do dono (Motorola Edge 60, Android 16): abre bem, o simulacro funciona. Tem **anúncios AdMob configurados com IDs reais**, mas **ainda não aparecem anúncios reais**: a app fica "requer revisão" no AdMob até estar numa loja suportada (ver "Atualização 2026-10-30" abaixo).
 - **Banco de perguntas:** 303 perguntas, 13 categorias, verificadas por fontes secundárias (ver `06`).
+
+## Atualização 2026-11-04
+- **OPPO rejeitou o pedido** por falta de informação do cartão bancário (foto sem número/validade/nome). Detalhes e passos em `00-LEIA-PRIMEIRO.md`, secção "RETOMAR AQUI", ponto 2.3. Nada mais falta para além de refazer as fotos e voltar a submeter.
 
 ## Atualização 2026-10-30
 - **AdMob:** conta aprovada pela Google, mas a app fica "requer revisão" porque não está numa loja suportada (sem loja, anúncios limitados).

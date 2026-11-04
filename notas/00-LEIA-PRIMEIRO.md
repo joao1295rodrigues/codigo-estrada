@@ -6,7 +6,7 @@ Projeto gratuito de treino para o exame teórico de condução em Portugal, em d
 
 Objetivo do dono do projeto: oferecer a app e o site **de graça** às pessoas, com anúncios discretos como pequena renda extra. **Custo zero** sempre que possível.
 
-## RETOMAR AQUI (resumo completo, atualizado a 2026-11-02)
+## RETOMAR AQUI (resumo completo, atualizado a 2026-11-04)
 Quem abre o projeto (por exemplo, localmente) deve ler **só esta secção** para saber tudo o que importa, e depois consultar os outros ficheiros se precisar de detalhe.
 
 **1. O que existe**
@@ -18,7 +18,7 @@ Quem abre o projeto (por exemplo, localmente) deve ler **só esta secção** par
 **2. Onde estamos (2026-11-02)**
 1. A conta AdMob foi aprovada, mas a app fica "requer revisão" e sem anúncios reais, porque o AdMob só a verifica quando está numa loja suportada. Sem loja, os anúncios ficam limitados.
 2. Lojas que o AdMob aceita (além da Google Play): Amazon (fechada no Android), Xiaomi (só empresas), Samsung (só empresas), VIVO (FAQ diz que não aceita particulares) e **OPPO** (aceita particulares). Só a OPPO serve.
-3. **OPPO:** o dono submeteu o formulário de programador (particular, identificação + cartão bancário) e está "In review". Portal europeu: https://developers-eu.oppomobile.com/. Em 2026-10-30 enviou email ao apoio (`devservice@oppo.com`, visto no rodapé do portal) a pedir o estado e o prazo. Sem resposta até 2026-11-02. Se não responderem, só reenviar após 5 dias úteis. Nota: o nome no formulário é a versão curta; se pedirem, enviar o nome completo como no cartão.
+3. **OPPO:** o dono submeteu o formulário de programador (particular, identificação + cartão bancário). Portal europeu: https://developers-eu.oppomobile.com/. Email ao apoio (`devservice@oppo.com`, rodapé do portal) enviado em 2026-10-30; resposta automática da OPPO ("pedido a ser tratado") em 2026-11-03. **Em 2026-11-04 o pedido foi REJEITADO**: motivo (em chinês, tradução nossa) "falta a informação do cartão bancário em 'Informação de qualificação'". A foto do cartão mostrava só o chip e o logótipo, sem número, validade nem nome (o nome está só atrás); a foto do documento de identificação estava em ângulo e com reflexos. **A fazer pelo dono:** refazer as duas fotos (cartão direito, inteiro, sem reflexos, em superfície lisa; número com os dígitos do meio tapados, validade e nome visíveis, frente e verso numa só imagem se o nome estiver atrás; tapar só o CVV; JPG/PNG abaixo de 5 MB), mostrar-nos primeiro uma captura, e voltar a submeter (botão "Cancel" na página de resultados para refazer). Em paralelo perguntar ao apoio qual é a informação em falta. Nome no formulário é a versão curta; se pedirem, enviar o nome completo.
 4. Resumo do email enviado: pedido educado de estado, particular de Portugal, app grátis de treino de código da estrada, primeiro projeto, sem promessas de dinheiro (decisão: não prometer percentagem de lucros, pode parecer suborno e cria compromissos).
 5. **Plano B:** Google Play (25 USD uma vez; contas novas de particulares precisam de um teste fechado com 12 testadores durante 14 dias; vem de resumos de pesquisa). Só se a OPPO falhar e os anúncios compensarem.
 
