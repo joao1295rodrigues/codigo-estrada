@@ -1,11 +1,14 @@
 # Ponto de situação
 
-**Última atualização: 2026-11-04.** O resumo completo e mais recente está em `00-LEIA-PRIMEIRO.md` (secção "RETOMAR AQUI"). (Atualizar a data e o resumo a cada alteração.)
+**Última atualização: 2026-11-05.** O resumo completo e mais recente está em `00-LEIA-PRIMEIRO.md` (secção "RETOMAR AQUI"). (Atualizar a data e o resumo a cada alteração.)
 
 ## Estado em resumo
 - **Site no ar** e a funcionar: https://joao1295rodrigues.github.io/codigo-estrada/ (28 páginas: app de treino, 13 páginas de perguntas por categoria, 10 guias, Sobre, Privacidade). **Sem anúncios** (o AdSense ainda não foi pedido).
 - **App Android** (Expo/React Native) a funcionar no telemóvel do dono (Motorola Edge 60, Android 16): abre bem, o simulacro funciona. Tem **anúncios AdMob configurados com IDs reais**, mas **ainda não aparecem anúncios reais**: a app fica "requer revisão" no AdMob até estar numa loja suportada (ver "Atualização 2026-10-30" abaixo).
 - **Banco de perguntas:** 303 perguntas, 13 categorias, verificadas por fontes secundárias (ver `06`).
+
+## Atualização 2026-11-05
+- **OPPO: pedido voltou a ser submetido** pelo dono com fotos novas (documento de identificação rodado e sem reflexos; cartão bancário pelas costas com nome, validade e últimos 4 dígitos visíveis, dígitos do meio e do início tapados). Risco: se rejeitarem outra vez por falta de informação, mostrar os primeiros 6 dígitos do cartão e o número do documento. O dono vai enviar email ao apoio (`devservice@oppo.com`) a pedir esclarecimento (texto em `10-publicacao-em-lojas.md`, versão mais formal e só informativa). Aguardar resposta; não reenviar antes de 5 dias úteis.
 
 ## Atualização 2026-11-04
 - **OPPO rejeitou o pedido** por falta de informação do cartão bancário (foto sem número/validade/nome). Detalhes e passos em `00-LEIA-PRIMEIRO.md`, secção "RETOMAR AQUI", ponto 2.3. Nada mais falta para além de refazer as fotos e voltar a submeter. Textos prontos para o apoio da OPPO em `10-publicacao-em-lojas.md`.
