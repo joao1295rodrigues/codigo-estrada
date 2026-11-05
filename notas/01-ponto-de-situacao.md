@@ -8,6 +8,7 @@
 - **Banco de perguntas:** 303 perguntas, 13 categorias, verificadas por fontes secundárias (ver `06`).
 
 ## Atualização 2026-11-05
+- **Email enviado ao apoio da OPPO em 2026-11-05** (versão formal e informativa: refere a resposta da Vera de 2026-11-03, a rejeição, a nova submissão de 2026-11-05 e pede que esclareçam que informação do cartão falta e se um número parcialmente tapado é aceite; menciona de forma educada que os dados do cartão são sensíveis). **Estado: à espera de resposta da OPPO** (pedido em análise outra vez). Não reenviar antes de 5 dias úteis (até cerca de 2026-11-12).
 - **OPPO: pedido voltou a ser submetido** pelo dono com fotos novas (documento de identificação rodado e sem reflexos; cartão bancário pelas costas com nome, validade e últimos 4 dígitos visíveis, dígitos do meio e do início tapados). Risco: se rejeitarem outra vez por falta de informação, mostrar os primeiros 6 dígitos do cartão e o número do documento. O dono vai enviar email ao apoio (`devservice@oppo.com`) a pedir esclarecimento (texto em `10-publicacao-em-lojas.md`, versão mais formal e só informativa). Aguardar resposta; não reenviar antes de 5 dias úteis.
 
 ## Atualização 2026-11-04
