@@ -1,11 +1,14 @@
 # Ponto de situação
 
-**Última atualização: 2026-11-05.** O resumo completo e mais recente está em `00-LEIA-PRIMEIRO.md` (secção "RETOMAR AQUI"). (Atualizar a data e o resumo a cada alteração.)
+**Última atualização: 2026-11-06.** O resumo completo e mais recente está em `00-LEIA-PRIMEIRO.md` (secção "RETOMAR AQUI"). (Atualizar a data e o resumo a cada alteração.)
 
 ## Estado em resumo
 - **Site no ar** e a funcionar: https://joao1295rodrigues.github.io/codigo-estrada/ (28 páginas: app de treino, 13 páginas de perguntas por categoria, 10 guias, Sobre, Privacidade). **Sem anúncios** (o AdSense ainda não foi pedido).
 - **App Android** (Expo/React Native) a funcionar no telemóvel do dono (Motorola Edge 60, Android 16): abre bem, o simulacro funciona. Tem **anúncios AdMob configurados com IDs reais**, mas **ainda não aparecem anúncios reais**: a app fica "requer revisão" no AdMob até estar numa loja suportada (ver "Atualização 2026-10-30" abaixo).
 - **Banco de perguntas:** 303 perguntas, 13 categorias, verificadas por fontes secundárias (ver `06`).
+
+## Atualização 2026-11-06
+- **Resposta do apoio da OPPO (Vera):** a verificação **não passa se informação-chave do cartão, como o número, estiver tapada** (já tinham dito que tudo tem de estar claramente visível; confirmam que os documentos ficam confidenciais e só servem para verificação interna). O dono tinha tapado parte do número do cartão e do CVV por segurança. **Decisão do dono pendente:** (A) mostrar o número completo (nunca o CVV) com precauções (confirmar que as compras online pedem confirmação/estão desativadas, vigiar movimentos, depois da aprovação pedir a eliminação das fotos, e bloquear/trocar o cartão se houver dúvidas); ou (B) desistir da OPPO e ir para a Google Play (25 USD + teste fechado 12 testers/14 dias). Não reenviar a foto sem o dono decidir.
 
 ## Atualização 2026-11-05
 - **Email enviado ao apoio da OPPO em 2026-11-05** (versão formal e informativa: refere a resposta da Vera de 2026-11-03, a rejeição, a nova submissão de 2026-11-05 e pede que esclareçam que informação do cartão falta e se um número parcialmente tapado é aceite; menciona de forma educada que os dados do cartão são sensíveis). **Estado: à espera de resposta da OPPO** (pedido em análise outra vez). Não reenviar antes de 5 dias úteis (até cerca de 2026-11-12).
