@@ -1,11 +1,14 @@
 # Ponto de situação
 
-**Última atualização: 2026-11-06.** O resumo completo e mais recente está em `00-LEIA-PRIMEIRO.md` (secção "RETOMAR AQUI"). (Atualizar a data e o resumo a cada alteração.)
+**Última atualização: 2026-11-20.** O resumo completo e mais recente está em `00-LEIA-PRIMEIRO.md` (secção "RETOMAR AQUI"). (Atualizar a data e o resumo a cada alteração.)
 
 ## Estado em resumo
 - **Site no ar** e a funcionar: https://joao1295rodrigues.github.io/codigo-estrada/ (28 páginas: app de treino, 13 páginas de perguntas por categoria, 10 guias, Sobre, Privacidade). **Sem anúncios** (o AdSense ainda não foi pedido).
 - **App Android** (Expo/React Native) a funcionar no telemóvel do dono (Motorola Edge 60, Android 16): abre bem, o simulacro funciona. Tem **anúncios AdMob configurados com IDs reais**, mas **ainda não aparecem anúncios reais**: a app fica "requer revisão" no AdMob até estar numa loja suportada (ver "Atualização 2026-10-30" abaixo).
 - **Banco de perguntas:** 303 perguntas, 13 categorias, verificadas por fontes secundárias (ver `06`).
+
+## Atualização 2026-11-20
+- Sem resposta da OPPO ao email de 2026-11-06. **Email de seguimento enviado pelo dono em 2026-11-20**; ainda sem resposta. Prazo sugerido: se não houver resposta até cerca de 2026-11-27, decidir entre (A) mostrar o número do cartão sem CVV ou (B) Google Play (25 USD, teste fechado). Nada a corrigir no AdMob: o ecrã app-ads.txt mostra "sem dados" porque a app ainda não está numa loja (esperado).
 
 ## Atualização 2026-11-06
 - **Dono respondeu à OPPO** (email formal e educado): não envia o cartão com o número completo visível; pede alternativas (comprovativo da conta de pagamento sem o número do cartão, p. ex. extrato ou confirmação de IBAN; ou aprovação provisória, com bloqueio posterior se não cumprir os requisitos) e pergunta que regulamento exige o número visível. Base citada: RGPD art. 5.º n.º 1 alínea c) (minimização de dados). Nota de pesquisa: o DSA art. 30.º (UE 2022/2065) obriga as plataformas a recolher dados da conta de pagamento dos "vendedores"; é provável a razão do pedido da OPPO (fontes secundárias; texto oficial não lido). **À espera da resposta.** Se disserem que não há alternativa: decidir entre mostrar o número (sem CVV, com cuidados) ou Google Play.
