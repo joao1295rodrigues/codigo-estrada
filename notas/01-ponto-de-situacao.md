@@ -1,11 +1,14 @@
 # Ponto de situação
 
-**Última atualização: 2026-11-20.** O resumo completo e mais recente está em `00-LEIA-PRIMEIRO.md` (secção "RETOMAR AQUI"). (Atualizar a data e o resumo a cada alteração.)
+**Última atualização: 2026-11-23.** O resumo completo e mais recente está em `00-LEIA-PRIMEIRO.md` (secção "RETOMAR AQUI"). (Atualizar a data e o resumo a cada alteração.)
 
 ## Estado em resumo
 - **Site no ar** e a funcionar: https://joao1295rodrigues.github.io/codigo-estrada/ (28 páginas: app de treino, 13 páginas de perguntas por categoria, 10 guias, Sobre, Privacidade). **Sem anúncios** (o AdSense ainda não foi pedido).
 - **App Android** (Expo/React Native) a funcionar no telemóvel do dono (Motorola Edge 60, Android 16): abre bem, o simulacro funciona. Tem **anúncios AdMob configurados com IDs reais**, mas **ainda não aparecem anúncios reais**: a app fica "requer revisão" no AdMob até estar numa loja suportada (ver "Atualização 2026-10-30" abaixo).
 - **Banco de perguntas:** 303 perguntas, 13 categorias, verificadas por fontes secundárias (ver `06`).
+
+## Atualização 2026-11-23
+- **OPPO (Vera) respondeu:** é preciso carregar o lado do cartão com o **número completo visível** (as costas servem), para confirmar que a conta bancária bate certo; **não aceitam nenhum dado tapado** nem no documento de identificação nem no cartão bancário. O dono, frustrado, enviou uma mensagem a dizer que desiste da OPPO e **não vai enviar mais mensagens**. **A OPPO fica parada.** Reabrir só se o dono decidir mostrar tudo sem tapar (opção A; texto de pedido de desculpa já redigido no chat, não é obrigatório). Próxima via provável: **Google Play** (opção B: 25 USD uma vez; teste fechado 12 testers/14 dias; confirmar requisitos atuais antes de gastar). Decisão do dono pendente, sem pressa. Não insistir nem enviar mais emails à OPPO sem o dono pedir.
 
 ## Atualização 2026-11-20
 - Sem resposta da OPPO ao email de 2026-11-06. **Email de seguimento enviado pelo dono em 2026-11-20**; ainda sem resposta. Prazo sugerido: se não houver resposta até cerca de 2026-11-27, decidir entre (A) mostrar o número do cartão sem CVV ou (B) Google Play (25 USD, teste fechado). Nada a corrigir no AdMob: o ecrã app-ads.txt mostra "sem dados" porque a app ainda não está numa loja (esperado).
