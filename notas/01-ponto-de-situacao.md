@@ -8,6 +8,7 @@
 - **Banco de perguntas:** 303 perguntas, 13 categorias, verificadas por fontes secundárias (ver `06`).
 
 ## Atualização 2026-11-23
+- **Google Play não viável por agora:** o dono não consegue arranjar os 12 testadores (teste fechado de 14 dias seguidos; fonte oficial: https://support.google.com/googleplay/android-developer/answer/14151465). Sem a OPPO nem a Google Play, a app só se distribui por APK (GitHub) e os anúncios reais ficam limitados. O dono diz que vai esperar a resposta da OPPO; nota: a última resposta da OPPO (Vera) já foi a exigir dados sem tapar, e o dono respondeu a desistir, por isso só haverá avanço se ele reabrir o pedido (opção A).
 - **OPPO (Vera) respondeu:** é preciso carregar o lado do cartão com o **número completo visível** (as costas servem), para confirmar que a conta bancária bate certo; **não aceitam nenhum dado tapado** nem no documento de identificação nem no cartão bancário. O dono, frustrado, enviou uma mensagem a dizer que desiste da OPPO e **não vai enviar mais mensagens**. **A OPPO fica parada.** Reabrir só se o dono decidir mostrar tudo sem tapar (opção A; texto de pedido de desculpa já redigido no chat, não é obrigatório). Próxima via provável: **Google Play** (opção B: 25 USD uma vez; teste fechado 12 testers/14 dias; confirmar requisitos atuais antes de gastar). Decisão do dono pendente, sem pressa. Não insistir nem enviar mais emails à OPPO sem o dono pedir.
 
 ## Atualização 2026-11-20
